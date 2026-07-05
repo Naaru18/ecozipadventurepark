@@ -1,0 +1,287 @@
+footer {
+  background: #071a0e;
+  border-top: 1px solid rgba(22, 163, 74, 0.2);
+  color: #d1d5db;
+  font-family: 'Inter', sans-serif;
+  margin-top: auto;
+}
+
+.foot-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+
+.foot-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.foot-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.foot-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.foot-logo-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+
+.foot-logo-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+
+.foot-desc {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: #9ca3af;
+  max-width: 280px;
+}
+
+
+.foot-socials {
+  display: flex;
+  gap: 10px;
+}
+
+
+.foot-social {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+
+.foot-social:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+.foot-col h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+
+.foot-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.foot-link {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+
+.foot-link:hover {
+  color: var(--primary);
+}
+
+
+.foot-link i {
+  font-size: 0.7rem;
+  color: var(--primary);
+}
+
+.foot-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.foot-contact-item i {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.foot-contact-item span {
+  font-size: 0.79rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+
+.foot-bottom {
+  border-top: 1px solid rgba(22, 163, 74, 0.12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.foot-copy {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.foot-copy span {
+  color: var(--primary);
+}
+
+.foot-bottom-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.foot-bottom-link {
+  font-size: 0.73rem;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.foot-bottom-link:hover {
+  color: var(--primary);
+}
+
+.foot-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #6b7280;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(22, 163, 74, 0.15);
+}
+
+.foot-badge i {
+  color: var(--primary);
+}
+
+.page-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 60px;
+  text-align: center;
+}
+
+.page-body p {
+  font-size: 0.9rem;
+  color: var(--text-second);
+}
+
+
+@media(max-width:1280px) {
+  .foot-top {
+    gap: 32px;
+  }
+}
+
+@media(max-width:1024px) {
+
+  .foot-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 40px;
+  }
+
+  .foot-brand {
+    grid-column: span 2;
+  }
+
+  .foot-desc {
+    max-width: 100%;
+  }
+}
+
+@media(max-width:768px) {
+  .foot-top {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 24px 32px;
+  }
+
+  .foot-brand {
+    grid-column: span 2;
+  }
+
+  .foot-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+  }
+
+  .foot-bottom-links {
+    gap: 14px;
+  }
+}
+
+@media(max-width:360px) {
+
+  .foot-top {
+    grid-template-columns: 1fr;
+    padding: 32px 14px 24px;
+  }
+
+  .foot-brand {
+    grid-column: span 1;
+  }
+
+  .foot-bottom {
+    padding: 16px 14px;
+  }
+}

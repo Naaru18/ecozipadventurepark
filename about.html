@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecozip Adventure - About Us</title>
+
+  <link rel="stylesheet" href="../about.css">
+  <link rel="stylesheet" href="../global.css">
+
+  <link rel="icon" type="image/png" href="../Images/icon.png">
+
+  <link rel="preload" href="../css/navbar.css" as="style">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="adventure-banner section">
+    <div class="banner-bg-parallax"></div>
+    <div class="banner-overlay"></div>
+
+    <div class="container">
+      <div class="banner-content">
+
+        <div class="eyebrow">
+          Eco Adventure Destination
+        </div>
+
+        <h2 class="section-title">
+          FLY ABOVE THE <span>FOREST</span>
+        </h2>
+
+        <p class="section-sub">
+          Experience Andhra Pradesh's most exciting zipline course and
+          adventure park. From high-speed canopy rides to thrilling rope
+          challenges, every moment is designed for unforgettable memories.
+        </p>
+
+        <div class="banner-actions">
+          <a href="#booking" class="btn-gold">
+            <i class="ti ti-calendar-plus"></i>
+            Book Adventure
+          </a>
+
+          <a href="#activities" class="btn-outline">
+            <i class="ti ti-map-pin"></i>
+            Explore Activities
+          </a>
+        </div>
+
+        <div class="banner-stats">
+
+          <div class="banner-stat">
+            <span class="num" data-count="12">0</span>
+            <span class="suffix">K+</span>
+            <p>Happy Guests</p>
+          </div>
+
+          <div class="banner-stat">
+            <span class="num" data-count="6">0</span>
+            <span class="suffix">+</span>
+            <p>Adventure</p>
+          </div>
+
+          <div class="banner-stat">
+            <span class="num" data-count="100">0</span>
+            <span class="suffix">%</span>
+            <p>Safety Certified</p>
+          </div>
+
+          <div class="banner-stat">
+            <span class="num" data-count="4.9">4.9</span>
+            <span class="suffix">★</span>
+            <p>Guest Rating</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    window.addEventListener("load", () => {
+
+      const counters = document.querySelectorAll(".banner-stat .num");
+
+      counters.forEach(counter => {
+
+        const target = parseFloat(counter.dataset.count);
+
+        if (isNaN(target)) return;
+
+        let current = 0;
+        const duration = 1200;
+        const step = target / (duration / 16);
+
+        function animate() {
+
+          current += step;
+
+          if (current >= target) {
+            counter.textContent =
+              Number.isInteger(target)
+                ? target
+                : target.toFixed(1);
+            return;
+          }
+
+          counter.textContent =
+            Number.isInteger(target)
+              ? Math.floor(current)
+              : current.toFixed(1);
+
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+
+      });
+
+    });
+
+
+
+    window.addEventListener("scroll", () => {
+
+      const bg = document.querySelector(".banner-bg-parallax");
+
+      if (!bg) return;
+
+      const y = window.scrollY * 0.15;
+
+      bg.style.transform =
+        `translateY(${y}px) scale(1.08)`;
+
+    });
+  </script>
+  <section class="story-section" id="story">
+    <div class="container">
+      <div class="eyebrow">Our Story</div>
+      <h2 class="section-title">From a <span>Forest Trail</span> to AP's #1 Park</h2>
+      <div class="story-layout">
+
+
+        <div class="story-intro">
+          <p><strong>It started with a rope and a bad idea.</strong> In 2018, Ravi Kumar — a forestry graduate from
+            Nellore — strung a 50-metre zipline between two mango trees behind his father's land. He charged ₹20 a ride.
+            It was rickety, probably illegal, and absolutely exhilarating.</p>
+          <p>One year later, EcoZip Adventures opened as a fully certified park on 18 acres of private forest reserve —
+            the first ACCT-accredited adventure course in Andhra Pradesh. What began as a backyard experiment became the
+            benchmark for outdoor adventure in coastal AP.</p>
+          <p>Today, EcoZip runs 12 distinct activities, employs 34 people from surrounding villages, and has hosted over
+            8,000 adventurers — from schoolkids on their first outdoor trip to corporate teams from Hyderabad looking
+            for something beyond a conference room.</p>
+          <p><strong>The rope got longer. The mission stayed the same.</strong></p>
+          <div class="story-intro__actions">
+            <a href="services.html" class="btn-primary">See All Activities →</a>
+            <a href="#team" class="btn-outline">Meet Our Team</a>
+          </div>
+        </div>
+
+
+        <div class="story-timeline">
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-year">2018</div>
+              <div class="tl-bar"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-title">The First Line</div>
+              <p class="tl-desc">Ravi Kumar builds a 50m test zipline on family land. Friends and neighbours are the
+                first riders. The feedback is unanimous: do more.</p>
+              <div class="tl-badge">🌱 Origin</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-year">2019</div>
+              <div class="tl-bar"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-title">EcoZip Opens</div>
+              <p class="tl-desc">18-acre park opens with 4 activities. ACCT certification achieved — first in AP. 400
+                riders in year one.</p>
+              <div class="tl-badge">🎉 Founding</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-year">2021</div>
+              <div class="tl-bar"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-title">The 7-Line Course</div>
+              <p class="tl-desc">Flagship zipline course launches with 7 lines and 2.4 km of canopy. Featured on AP
+                Tourism's recommended list. Visitor count crosses 2,000.</p>
+              <div class="tl-badge">⭐ Milestone</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-year">2022</div>
+              <div class="tl-bar"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-title">Eco Pledge Programme</div>
+              <p class="tl-desc">Carbon-neutral operations certified. Forest conservation partnership launched,
+                protecting 40+ acres around the park. Single-use plastic banned site-wide.</p>
+              <div class="tl-badge">🌍 Eco</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-year">2024</div>
+              <div class="tl-bar"></div>
+            </div>
+            <div class="tl-body">
+              <div class="tl-title">8,000+ Riders</div>
+              <p class="tl-desc">Park reaches 8,000 lifetime visitors. 34 local employees. 12 activities. 4.9-star
+                average across 1,400+ reviews. The rope got a lot longer.</p>
+              <div class="tl-badge">🏆 Today</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="stats-strip">
+    <div class="container">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.5);">
+        <span
+          style="background:rgba(255,255,255,0.08);width:32px;height:2px;border-radius:2px;flex-shrink:0;display:block;"></span>
+        By the Numbers
+        <span
+          style="background:rgba(255,255,255,0.08);width:32px;height:2px;border-radius:2px;flex-shrink:0;display:block;"></span>
+      </div>
+      <div class="stats-inner">
+        <div class="stat-cell">
+          <span class="stat-cell__icon"><i class="fa-solid fa-tree"></i></span>
+          <span class="stat-cell__num">18<em>ac</em></span>
+          <span class="stat-cell__label">Park Area</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-cell__icon"><i class="ti ti-parachute"></i></span>
+          <span class="stat-cell__num">8<em>K+</em></span>
+          <span class="stat-cell__label">Riders Served</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-cell__icon"><i class="ti ti-leaf"></i></span>
+          <span class="stat-cell__num">40<em>+</em></span>
+          <span class="stat-cell__label">Acres Protected</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-cell__icon"><i class="ti ti-calendar"></i></span>
+          <span class="stat-cell__num">5<em>yrs</em></span>
+          <span class="stat-cell__label">In Operation</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-cell__icon"><i class="ti ti-users"></i></span>
+          <span class="stat-cell__num">34<em>+</em></span>
+          <span class="stat-cell__label">Local Jobs Created</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <div class="values-header">
+        <div class="eyebrow">What We Stand For</div>
+        <h2 class="section-title">Mission & <span>Core Values</span></h2>
+        <p class="section-sub">Four principles that shape every rope we rig, every guide we hire, and every tree we
+          plant.</p>
+      </div>
+      <div class="values-grid">
+
+        <div class="val-card">
+          <div class="val-card__icon-wrap"><i class="ti ti-shield"></i></div>
+          <div class="val-card__body">
+            <div class="val-card__name">Safety is Non-Negotiable</div>
+            <p class="val-card__desc">We treat safety not as a checklist but as a culture. Every team member — from
+              guides to maintenance crew — is trained to stop operations the moment anything looks wrong. No ride is
+              worth a compromise.</p>
+            <div class="val-card__quote">"When in doubt, we don't."</div>
+          </div>
+        </div>
+
+        <div class="val-card">
+          <div class="val-card__icon-wrap"><i class="ti ti-leaf"></i></div>
+          <div class="val-card__body">
+            <div class="val-card__name">Eco-Responsibility</div>
+            <p class="val-card__desc">The forest is our home and our product. We operate carbon-neutral, ban single-use
+              plastics site-wide, and actively partner with conservation organisations to grow the forest around us —
+              not just preserve it.</p>
+            <div class="val-card__quote">"Leave it better than you found it."</div>
+          </div>
+        </div>
+
+        <div class="val-card">
+          <div class="val-card__icon-wrap"><i class="ti ti-users"></i></div>
+          <div class="val-card__body">
+            <div class="val-card__name">Community First</div>
+            <p class="val-card__desc">94% of our workforce comes from villages within 15 km of the park. We run free
+              adventure days for local schools twice a year and channel a portion of every ticket into the Nellore
+              Forest Education Fund.</p>
+            <div class="val-card__quote">"Adventure should lift everyone around it."</div>
+          </div>
+        </div>
+
+        <div class="val-card">
+          <div class="val-card__icon-wrap"><i class="ti ti-bolt"></i></div>
+          <div class="val-card__body">
+            <div class="val-card__name">Thrill Without Compromise</div>
+            <p class="val-card__desc">We refuse to dumb down our experiences. The ziplines are genuinely fast, the
+              climbs are genuinely hard, and the campsites are genuinely wild. We just make sure every bit of that
+              thrill is delivered safely.</p>
+            <div class="val-card__quote">"Real adventure. Real safety. No contradiction."</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <span class="cta-tag">Get Started Today</span>
+        <h2>Ready to Transform Your Business?</h2>
+        <p>
+          Let's create something amazing together. Contact our team and take
+          the first step toward your next big success.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="#" class="cta-btn btn-solid">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+
+    const revealEls = document.querySelectorAll(
+      '.val-card, .team-card, .tl-item, .cert-card, .pledge, .eco-block, .award-cell, .testi-card, .safety-step, .stat-cell'
+    );
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.5s ease ${(i % 6) * 0.07}s, transform 0.5s ease ${(i % 6) * 0.07}s`;
+      io.observe(el);
+    });
+
+
+    const statNums = document.querySelectorAll('.stat-cell__num');
+    const statObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const text = el.textContent;
+          const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+          if (!num) return;
+          const suffix = text.replace(/[0-9.]/g, '');
+          let start = 0;
+          const dur = 1600;
+          const step = timestamp => {
+            if (!start) start = timestamp;
+            const prog = Math.min((timestamp - start) / dur, 1);
+            const ease = 1 - Math.pow(1 - prog, 3);
+            el.innerHTML = (num < 10 ? (ease * num).toFixed(0) : Math.round(ease * num)) + suffix;
+            if (prog < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          statObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNums.forEach(el => statObs.observe(el));
+  </script>
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+
+</body>
+
+</html>

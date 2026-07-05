@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecozip Adventure Home</title>
+
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="icon" type="image/png" href="../Images/icon.png">
+
+  <link rel="preload" href="../css/navbar.css" as="style">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+
+  <section class="hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <i class="ti ti-map-pin" aria-hidden="true"></i> Coorg, Karnataka · Open Daily
+      </div>
+
+      <h1 class="hero-title">
+        FLY ABOVE<br><span>THE</span> <span class="gold">JUNGLE</span>
+      </h1>
+
+      <p class="hero-desc">
+        India's most thrilling zipline &amp; adventure park. Six adrenaline experiences, zero compromises on safety —
+        set deep in the Western Ghats.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#pricing" class="btn-gold">
+          <i class="ti ti-calendar-plus" aria-hidden="true"></i> Book Now
+        </a>
+        <a href="#activities" class="btn-outline-white">
+          <i class="ti ti-player-play" aria-hidden="true"></i> Watch Video
+        </a>
+      </div>
+
+
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-dot"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+  <div class="trust-strip">
+    <div class="trust-track-wrap">
+      <div class="trust-inner" id="trustInner">
+        <div class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> EN 15567 Certified</div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><i class="ti ti-award" aria-hidden="true"></i> Best Adventure Park 2024</div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><i class="ti ti-star-filled" style="color:var(--secondary)" aria-hidden="true"></i> 4.9
+          / 5 on Google</div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><i class="ti ti-first-aid-kit" aria-hidden="true"></i> On-Site Paramedics</div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><i class="ti ti-leaf" aria-hidden="true"></i> Zero Deforestation</div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><i class="ti ti-users" aria-hidden="true"></i> 12,000+ Guests Served</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const inner = document.getElementById('trustInner');
+      if (window.innerWidth <= 768) {
+        const clone = inner.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        inner.parentNode.appendChild(clone);
+      }
+    })();
+
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.hero-stat .num[data-target]').forEach(el => {
+        const end = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        let cur = 0;
+        const step = end / 60;
+        const timer = setInterval(() => {
+          cur = Math.min(cur + step, end);
+          el.textContent = Math.round(cur) + suffix;
+          if (cur >= end) clearInterval(timer);
+        }, 20);
+      });
+    });
+  </script>
+  <section class="section activities" id="activities">
+    <div class="container">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="section-title">Push Your <span>Limits</span></h2>
+      <p class="section-sub">Six signature experiences built for every kind of thrill-seeker — from first-timers to
+        seasoned adventurers.</p>
+
+      <div class="acts-grid">
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ1.jpg" alt="Dual Zipline" loading="eager"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-extreme">EXTREME</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Dual Zipline</div>
+            <div class="act-desc">Race side-by-side at 120 km/h across a 2 km wire suspended over the valley.</div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>45 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 10+</span>
+              <span><i class="ti ti-arrow-up" aria-hidden="true"></i>2 km wire</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ2.jfif" alt="Canopy Walk" loading="lazy"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-moderate">MODERATE</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Canopy Walk</div>
+            <div class="act-desc">Navigate a suspended sky walkway through treetops, 40 metres above the forest floor.
+            </div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>30 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 6+</span>
+              <span><i class="ti ti-arrow-up" aria-hidden="true"></i>40m high</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ3.jfif" alt="Rock Climbing" loading="lazy"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-high">HIGH</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Rock Climbing</div>
+            <div class="act-desc">Ascend natural rock faces with five routes graded beginner to expert across a 30m
+              cliff.</div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>60 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 8+</span>
+              <span><i class="ti ti-arrow-up" aria-hidden="true"></i>30m face</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ4.jfif" alt="Rappelling" loading="lazy"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-high">HIGH</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Rappelling</div>
+            <div class="act-desc">Control your descent down a sheer rock face. The view from the top makes the drop
+              worthwhile.</div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>20 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 12+</span>
+              <span><i class="ti ti-arrow-down" aria-hidden="true"></i>25m drop</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ5.jfif" alt="Night Zipline" loading="lazy"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-extreme">EXTREME</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Night Zipline</div>
+            <div class="act-desc">Glow-in-dark harnesses, LED-lit wires, and a star-filled sky. Fri &amp; Sat evenings
+              only.</div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>45 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 12+</span>
+              <span><i class="ti ti-moon" aria-hidden="true"></i>After dark</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="act-card">
+          <div class="act-img">
+            <img src="../Images/activ6.jfif" alt="Burma Bridge" loading="lazy"
+              onerror="this.style.background='#0a1f10'" />
+            <div class="diff-badge diff-moderate">MODERATE</div>
+          </div>
+          <div class="act-body">
+            <div class="act-name">Burma Bridge</div>
+            <div class="act-desc">Test your balance on a three-rope suspension bridge, wind-buffeted and wobbling.</div>
+            <div class="act-meta">
+              <span><i class="ti ti-clock" aria-hidden="true"></i>15 min</span>
+              <span><i class="ti ti-user" aria-hidden="true"></i>Ages 6+</span>
+              <span><i class="ti ti-arrow-up" aria-hidden="true"></i>20m high</span>
+            </div>
+            <a href="#" class="act-link">View more <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="section gallery">
+    <div class="container">
+      <div class="eyebrow">Action Shots</div>
+      <h2 class="section-title">See the <span>Thrill</span></h2>
+      <p class="section-sub">Real guests, real moments. No filters — just pure adventure.</p>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="g-item tall" data-index="0">
+          <img src="../Images/trek1.jpg" alt="Dual Zipline" loading="eager" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Dual Zipline</div>
+        </div>
+
+        <div class="g-item" data-index="1">
+          <img src="../Images/gal2.jfif" alt="Rock Climbing" loading="lazy" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Rock Climbing</div>
+        </div>
+
+        <div class="g-item" data-index="2">
+          <img src="../Images/gal3.jfif" alt="Forest Canopy" loading="lazy" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Forest Canopy</div>
+        </div>
+
+        <div class="g-item" data-index="3">
+          <img src="../Images/gal4.jfif" alt="Mountain View" loading="lazy" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Mountain View</div>
+        </div>
+
+        <div class="g-item wide" data-index="4">
+          <img src="../Images/gal5.jfif" alt="Rappelling" loading="lazy" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Rappelling</div>
+        </div>
+
+        <div class="g-item" data-index="5">
+          <img src="../Images/gal6.jfif" alt="Night Sky Adventure" loading="lazy" />
+          <div class="g-overlay"><i class="ti ti-zoom-in" aria-hidden="true"></i></div>
+          <div class="g-caption">Night Zipline</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lbClose" aria-label="Close"><i class="ti ti-x"></i></button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous"><i class="ti ti-chevron-left"></i></button>
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <button class="lb-next" id="lbNext" aria-label="Next"><i class="ti ti-chevron-right"></i></button>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+
+  <script>
+    const items = Array.from(document.querySelectorAll('.g-item'));
+    const imgs = items.map(el => ({
+      src: el.querySelector('img').src,
+      alt: el.querySelector('img').alt
+    }));
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCounter');
+    let current = 0;
+
+    function openLb(idx) {
+      current = idx;
+      lbImg.src = imgs[idx].src;
+      lbImg.alt = imgs[idx].alt;
+      lbCount.textContent = (idx + 1) + ' / ' + imgs.length;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function navigate(dir) {
+      current = (current + dir + imgs.length) % imgs.length;
+      lbImg.src = imgs[current].src;
+      lbImg.alt = imgs[current].alt;
+      lbCount.textContent = (current + 1) + ' / ' + imgs.length;
+    }
+
+    items.forEach((el, i) => el.addEventListener('click', () => openLb(i)));
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    document.getElementById('lbPrev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lbNext').addEventListener('click', () => navigate(1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  </script>
+
+  <section class="safety">
+    <div class="safety-bg"></div>
+
+    <div class="container">
+
+      <div class="eyebrow">Safety First</div>
+      <h2 class="section-title" style="color:#fff">Built to <span>Protect</span> You</h2>
+
+      <div class="safety-inner">
+        <div class="safety-left">
+          <p>Every piece of equipment is inspected daily. Every guide is trained beyond industry minimums. Safety isn't
+            our policy — it's our obsession.</p>
+          <div class="cert-list">
+            <div class="cert-item"><i class="ti ti-certificate"></i><span>EN 15567 European Adventure Activity
+                Standard</span></div>
+            <div class="cert-item"><i class="ti ti-shield"></i><span>ISO 9001:2015 Quality Management Certified</span>
+            </div>
+            <div class="cert-item"><i class="ti ti-users"></i><span>Guides: 200+ hours certified training</span></div>
+            <div class="cert-item"><i class="ti ti-tool"></i><span>Daily equipment inspection protocol</span></div>
+          </div>
+        </div>
+        <div class="safety-stats">
+          <div class="safety-stat">
+            <div class="snum">0</div>
+            <div class="slbl">Safety Incidents Ever</div>
+          </div>
+          <div class="safety-stat">
+            <div class="snum">200+</div>
+            <div class="slbl">Guide Training Hours</div>
+          </div>
+          <div class="safety-stat">
+            <div class="snum">3x</div>
+            <div class="slbl">Redundant Brake Systems</div>
+          </div>
+          <div class="safety-stat">
+            <div class="snum">24/7</div>
+            <div class="slbl">Equipment Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section events">
+    <div class="container">
+
+      <div class="events-header">
+        <div class="eyebrow">Upcoming</div>
+        <h2 class="section-title">Events & <span>Offers</span></h2>
+        <p class="section-sub">Night zips, birthday packages, and seasonal deals — something new happening every week.
+        </p>
+      </div>
+
+      <div class="events-grid">
+
+        <div class="event-card reveal">
+          <div class="event-img">
+            <img src="../Images/eve1.jfif" alt="Night Zipline" />
+            <div class="event-date">Every Fri & Sat</div>
+            <div class="event-overlay"></div>
+          </div>
+          <div class="event-body">
+            <div class="event-tag">Night Experience</div>
+            <div class="event-name">Night Zipline Under the Stars</div>
+            <div class="event-desc">Glow harnesses, LED wires, a full moon sky. The most surreal 45 minutes you'll ever
+              spend outdoors.</div>
+            <div class="event-meta">
+              <span class="event-price">₹2,499<span class="per">/person</span></span>
+              <a href="#" class="event-link">Book now <i class="ti ti-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card reveal">
+          <div class="event-img">
+            <img src="../Images/eve2.jfif" alt="Kids Camp" />
+            <div class="event-date">School Holidays</div>
+            <div class="event-overlay"></div>
+          </div>
+          <div class="event-body">
+            <div class="event-tag">Family Package</div>
+            <div class="event-name">School Holiday Adventure Camp</div>
+            <div class="event-desc">3-day guided adventure camp for ages 8–16. Climbing, canopy walk, zip, and
+              wilderness skills.</div>
+            <div class="event-meta">
+              <span class="event-price">₹6,999<span class="per">/child</span></span>
+              <a href="#" class="event-link">Learn more <i class="ti ti-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card reveal">
+          <div class="event-img">
+            <img src="../Images/eve3.jfif" alt="Birthday" />
+            <div class="event-date">Any Weekend</div>
+            <div class="event-overlay"></div>
+          </div>
+          <div class="event-body">
+            <div class="event-tag">Special Occasion</div>
+            <div class="event-name">Birthday Group Package</div>
+            <div class="event-desc">Private session for 10+ guests. Includes all activities, a decorated base camp, and
+              a group photo package.</div>
+            <div class="event-meta">
+              <span class="event-price">From ₹24,999</span>
+              <a href="#" class="event-link">Enquire <i class="ti ti-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    const revealEls = document.querySelectorAll('.events .reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${i * 120}ms`;
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+
+
+    document.querySelectorAll('.event-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#') && href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+  <section class="section pricing" id="pricing">
+    <div class="container">
+
+      <div class="pricing-header">
+        <div class="eyebrow">Packages</div>
+        <h2 class="section-title">Choose Your <span>Adventure</span></h2>
+        <p class="section-sub">Transparent pricing, no hidden fees. Every package includes safety gear and a certified
+          guide.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+
+        <div class="price-card reveal">
+          <div class="price-top-bar"></div>
+          <div class="price-badge-wrap"></div>
+          <div class="price-plan">Solo</div>
+          <div class="price-val"><sup>₹</sup>1,499</div>
+          <div class="price-divider"></div>
+          <div class="price-desc">Single activity pass — great for first-timers wanting to try one experience.</div>
+          <ul class="price-features">
+            <li><span class="tick"><i class="ti ti-check"></i></span>1 activity of choice</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Safety gear included</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Certified guide</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Free parking</li>
+          </ul>
+          <div class="price-btn">
+            <a href="#" class="btn-outline">Book Solo</a>
+          </div>
+        </div>
+
+
+        <div class="price-card featured reveal">
+          <div class="price-top-bar"></div>
+          <div class="price-badge-wrap">
+            <span class="price-badge">Most Popular</span>
+          </div>
+          <div class="price-plan">Explorer</div>
+          <div class="price-val"><sup>₹</sup>3,499</div>
+          <div class="price-divider"></div>
+          <div class="price-desc">3 activities bundled — the most popular way to experience EcoZip.</div>
+          <ul class="price-features">
+            <li><span class="tick"><i class="ti ti-check"></i></span>3 activities of choice</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Priority booking</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Lunch included</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Photo package</li>
+          </ul>
+          <div class="price-btn">
+            <a href="#" class="btn-primary">Book Explorer</a>
+          </div>
+        </div>
+
+
+        <div class="price-card reveal">
+          <div class="price-top-bar"></div>
+          <div class="price-badge-wrap">
+          </div>
+          <div class="price-plan">Full Park</div>
+          <div class="price-val"><sup>₹</sup>5,499</div>
+          <div class="price-divider"></div>
+          <div class="price-desc">Unlimited access to all 6 activities for one day — the complete experience.</div>
+          <ul class="price-features">
+            <li><span class="tick"><i class="ti ti-check"></i></span>All 6 activities</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Lunch & snacks</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Full photo package</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Night zip eligible</li>
+          </ul>
+          <div class="price-btn">
+            <a href="#" class="btn-outline">Book Full Day</a>
+          </div>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-top-bar"></div>
+          <div class="price-badge-wrap"></div>
+          <div class="price-plan">Corporate</div>
+          <div class="price-val price-custom">Custom</div>
+          <div class="price-divider"></div>
+          <div class="price-desc">Tailored group packages for 20+ guests. Team building, private sessions, catering.
+          </div>
+          <ul class="price-features">
+            <li><span class="tick"><i class="ti ti-check"></i></span>Private park session</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Dedicated coordinator</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Custom catering</li>
+            <li><span class="tick"><i class="ti ti-check"></i></span>Group photography</li>
+          </ul>
+          <div class="price-btn">
+            <a href="#" class="btn-outline">Get a Quote</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    const priceCards = document.querySelectorAll('.pricing .reveal');
+    const priceObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${i * 100}ms`;
+          entry.target.classList.add('visible');
+          priceObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    priceCards.forEach(el => priceObs.observe(el));
+
+
+    document.querySelectorAll('.price-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mx', `${x}%`);
+        card.style.setProperty('--my', `${y}%`);
+      });
+    });
+  </script>
+  <section class="section faq" id="faq">
+    <div class="container">
+
+      <div class="eyebrow">Common Questions</div>
+      <h2 class="section-title">Anything <span>Unclear?</span></h2>
+
+      <div class="faq-list" id="faqList">
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What are the age and weight limits?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Most activities require a minimum age of 10 and a maximum weight of 120 kg. The
+              Dual Zipline requires age 10+. Rappelling and Night Zip require age 12+. Children under 16 must be
+              accompanied by a guardian.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What should I wear and bring?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Wear closed-toe shoes (mandatory), comfortable athletic clothing, and avoid loose
+              jewellery. Bring a light jacket for the canopy — it can get breezy. We provide all safety equipment.
+              Lockers are available for bags.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>What is your weather cancellation policy?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">We monitor weather continuously. If we cancel due to unsafe conditions, you receive
+              a full refund or free rescheduling. If you cancel 48+ hours in advance, you receive a full refund.
+              Cancellations under 24 hours receive a 50% refund.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Is prior experience required?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">None at all. Every activity begins with a certified guide-led safety briefing and
+              demonstration. We have thousands of first-timers every year — our guides are trained to ease nerves and
+              ensure everyone feels confident before going.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Are there accessibility accommodations?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">The Canopy Walk and Burma Bridge are accessible for most visitors. We assess each
+              guest individually — please contact us in advance so we can prepare appropriately. We're committed to
+              making adventure accessible to as many people as possible.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>How far in advance should I book?</span>
+            <i class="ti ti-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Weekends and holidays fill 2–3 weeks in advance. Weekdays are generally available
+              with 1–2 days notice. Night Zipline slots are limited to 20 per session and sell out fastest — book as
+              early as possible.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+
+        document.querySelectorAll('.faq-item.open').forEach(open => {
+          open.classList.remove('open');
+        });
+
+
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${i * 70}ms`;
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'none';
+          faqObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faqItems.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+      faqObs.observe(el);
+    });
+  </script>
+  <section class="cta-banner" id="cta">
+    <div class="cta-banner-bg"></div>
+    <div class="cta-banner-overlay"></div>
+
+    <div class="cta-inner">
+      <div class="cta-eyebrow">Limited Slots Available</div>
+      <h2 class="cta-title">Ready to <span>Fly?</span></h2>
+      <p class="cta-sub">Weekends are filling up fast. Lock in your slot today and experience the Western Ghats like
+        never before.</p>
+
+      <div class="cta-btns">
+        <a href="#pricing" class="btn-gold">
+          <i class="ti ti-calendar-plus"></i>
+          Book Your Slot
+        </a>
+        <a href="#activities" class="btn-ghost">
+          <i class="ti ti-binoculars"></i>
+          Explore Activities
+        </a>
+      </div>
+
+      <div class="urgency">
+        <span class="urgency-dot"></span>
+        <i class="ti ti-clock"></i>
+        14 slots remaining this weekend
+      </div>
+    </div>
+  </section>
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecozip Adventure Home2</title>
+
+  <link rel="stylesheet" href="../home2.css">
+  <link rel="stylesheet" href="../global.css">
+
+  <link rel="icon" type="image/png" href="../Images/icon.png">
+
+  <link rel="preload" href="../css/navbar.css" as="style">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <section class="home2-hero">
+    <div class="container">
+      <div class="home2-hero-content">
+
+        <span class="eyebrow">
+          Adventure • Nature • Adrenaline
+        </span>
+
+        <h1 class="home2-hero-title">
+          Fly Higher.
+          <span>Challenge Yourself.</span>
+         
+        </h1>
+
+        <p class="home2-hero-sub">
+          Experience thrilling ziplines, high-rope courses, sky cycling,
+          climbing walls.
+        </p>
+
+        <div class="home2-hero-actions">
+          <a href="#" class="btn-primary">
+            Book Your Adventure
+          </a>
+
+          <a href="#" class="btn-outline">
+            Explore Activities
+          </a>
+        </div>
+
+        <div class="home2-hero-stats">
+
+          <div class="hero-stat">
+            <h3>12+</h3>
+            <span>Adventure Activities</span>
+          </div>
+
+          <div class="hero-stat">
+            <h3>500m</h3>
+            <span>Thrilling Zipline Course</span>
+          </div>
+
+          <div class="hero-stat">
+            <h3>100%</h3>
+            <span>Certified Safety Systems</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="exp-strip">
+    <div class="exp-strip-inner">
+      <span class="exp-strip-item"><span class="dot"></span>Zipline Racing</span>
+      <span class="exp-strip-item"><span class="dot"></span>Canopy Walk</span>
+      <span class="exp-strip-item"><span class="dot"></span>Rock Climbing</span>
+      <span class="exp-strip-item"><span class="dot"></span>Rappelling</span>
+      <span class="exp-strip-item"><span class="dot"></span>Burma Bridge</span>
+      <span class="exp-strip-item"><span class="dot"></span>Night Zipline</span>
+      <span class="exp-strip-item"><span class="dot"></span>Kids Zone</span>
+      <span class="exp-strip-item"><span class="dot"></span>Group Packages</span>
+      <span class="exp-strip-item"><span class="dot"></span>Zipline Racing</span>
+      <span class="exp-strip-item"><span class="dot"></span>Canopy Walk</span>
+      <span class="exp-strip-item"><span class="dot"></span>Rock Climbing</span>
+      <span class="exp-strip-item"><span class="dot"></span>Rappelling</span>
+      <span class="exp-strip-item"><span class="dot"></span>Burma Bridge</span>
+      <span class="exp-strip-item"><span class="dot"></span>Night Zipline</span>
+      <span class="exp-strip-item"><span class="dot"></span>Kids Zone</span>
+      <span class="exp-strip-item"><span class="dot"></span>Group Packages</span>
+    </div>
+  </div>
+  <script>
+
+    (function () {
+      const canvas = document.getElementById('heroCanvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, particles;
+      const COUNT = 38;
+
+      function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function mkParticle() {
+        return {
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.6 + 0.4,
+          vx: (Math.random() - 0.5) * 0.28,
+          vy: -Math.random() * 0.38 - 0.12,
+          o: Math.random() * 0.45 + 0.1,
+          c: Math.random() > 0.55 ? '22,163,74' : '202,138,4'
+        };
+      }
+
+      function init() {
+        resize();
+        particles = Array.from({ length: COUNT }, mkParticle);
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.c},${p.o})`;
+          ctx.fill();
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.y < -4) p.y = H + 4;
+          if (p.x < -4) p.x = W + 4;
+          if (p.x > W + 4) p.x = -4;
+        });
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => { resize(); });
+      init();
+      draw();
+    })();
+  </script>
+  <section class="section how" id="how">
+    <div class="container">
+      <div class="how-header">
+        <div class="eyebrow">The Process</div>
+        <h2 class="section-title reveal">How It <span>Works</span></h2>
+        <p class="section-sub reveal">From booking to take-off — here's what your adventure day looks like, step by
+          step.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">01</div>
+          <div class="how-step-content">
+            <div class="how-step-title">Book Online</div>
+            <div class="how-step-desc">Pick your package, choose a date, and reserve your slot in under 60 seconds.
+              Instant confirmation via WhatsApp.</div>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">02</div>
+          <div class="how-step-content">
+            <div class="how-step-title">Arrive & Check In</div>
+            <div class="how-step-desc">Head to our base camp, check in at the welcome desk, and meet your certified
+              guide for the day.</div>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">03</div>
+          <div class="how-step-content">
+            <div class="how-step-title">Gear Up</div>
+            <div class="how-step-desc">We fit you with certified harness, helmet, and gloves. A full safety briefing
+              ensures every guest is confident before going.</div>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">04</div>
+          <div class="how-step-content">
+            <div class="how-step-title">Fly & Explore</div>
+            <div class="how-step-desc">Take on your chosen activities, guided every step. Your photographer captures
+              every moment — you just enjoy the ride.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+
+      const revealEls = document.querySelectorAll('.how .reveal');
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target); // fire once
+              }
+            });
+          },
+          { threshold: 0.18 }
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+
+      const steps = document.querySelectorAll('.how-step');
+
+      if ('IntersectionObserver' in window) {
+        const stepIO = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const idx = Array.from(steps).indexOf(entry.target);
+                entry.target.style.transitionDelay = `${idx * 120}ms`;
+                entry.target.classList.add('step-visible');
+                stepIO.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        steps.forEach((s) => stepIO.observe(s));
+      } else {
+        steps.forEach((s) => s.classList.add('step-visible'));
+      }
+
+
+      document.querySelectorAll('.how-num').forEach((num) => {
+        num.addEventListener('click', function (e) {
+
+          const old = this.querySelector('.num-ripple');
+          if (old) old.remove();
+
+          const ripple = document.createElement('span');
+          ripple.className = 'num-ripple';
+          this.appendChild(ripple);
+
+
+          ripple.addEventListener('animationend', () => ripple.remove());
+        });
+      });
+
+    })();
+  </script>
+  <section class="section guides" id="guides">
+    <div class="container">
+      <div class="guides-header">
+        <div class="eyebrow">Our Team</div>
+        <h2 class="section-title reveal">Meet the <span>Guides</span></h2>
+        <p class="section-sub reveal">Every guide at EcoZip is certified, experienced, and genuinely passionate about
+          getting you safely to the other end with a massive smile.</p>
+      </div>
+      <div class="guides-grid">
+
+        <div class="guide-card reveal">
+          <div class="guide-img">
+            <img src="../Images/teams1.jfif" alt="Rajan Pillai" />
+            <div class="guide-img-overlay"></div>
+            <div class="guide-exp-badge"><i class="ti ti-mountain"></i> 8 yrs</div>
+            <div class="guide-social-strip">
+              <a href="#" class="gs-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+              <a href="#" class="gs-btn" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+              <a href="#" class="gs-btn" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="guide-body">
+            <div class="guide-meta">
+              <div>
+                <div class="guide-name">Rajan Pillai</div>
+                <div class="guide-role">Head of Operations</div>
+              </div>
+              <div class="guide-rating"><i class="ti ti-star-filled"></i> 4.9</div>
+            </div>
+            <div class="guide-divider"></div>
+            <div class="guide-desc">Former Army climber with 8 years leading high-altitude adventure programmes across
+              South India.</div>
+            <div class="guide-certs">
+              <span class="guide-cert"><i class="ti ti-shield-check"></i>EN 15567</span>
+              <span class="guide-cert"><i class="ti ti-heart-plus"></i>First Aid</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-card reveal">
+          <div class="guide-img">
+            <img src="../Images/teams2.jfif" alt="Meena Suresh" />
+            <div class="guide-img-overlay"></div>
+            <div class="guide-exp-badge"><i class="ti ti-mountain"></i> 5 yrs</div>
+            <div class="guide-social-strip">
+              <a href="#" class="gs-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+              <a href="#" class="gs-btn" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+              <a href="#" class="gs-btn" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="guide-body">
+            <div class="guide-meta">
+              <div>
+                <div class="guide-name">Meena Suresh</div>
+                <div class="guide-role">Senior Zipline Guide</div>
+              </div>
+              <div class="guide-rating"><i class="ti ti-star-filled"></i> 5.0</div>
+            </div>
+            <div class="guide-divider"></div>
+            <div class="guide-desc">State-level rock climber turned guide. Known for her calm coaching style — perfect
+              for nervous first-timers.</div>
+            <div class="guide-certs">
+              <span class="guide-cert"><i class="ti ti-certificate"></i>UIAA Cert</span>
+              <span class="guide-cert"><i class="ti ti-lifebuoy"></i>Rescue Ops</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-card reveal">
+          <div class="guide-img">
+            <img src="../Images/teams3.jfif" alt="Dev Krishnan" />
+            <div class="guide-img-overlay"></div>
+            <div class="guide-exp-badge"><i class="ti ti-mountain"></i> 4 yrs</div>
+            <div class="guide-social-strip">
+              <a href="#" class="gs-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+              <a href="#" class="gs-btn" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+              <a href="#" class="gs-btn" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="guide-body">
+            <div class="guide-meta">
+              <div>
+                <div class="guide-name">Dev Krishnan</div>
+                <div class="guide-role">Night Operations Lead</div>
+              </div>
+              <div class="guide-rating"><i class="ti ti-star-filled"></i> 4.8</div>
+            </div>
+            <div class="guide-divider"></div>
+            <div class="guide-desc">Specialist in low-light adventure activities. Hosts every Night Zipline session with
+              contagious energy.</div>
+            <div class="guide-certs">
+              <span class="guide-cert"><i class="ti ti-moon"></i>Night Ops</span>
+              <span class="guide-cert"><i class="ti ti-stethoscope"></i>Paramedic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-card reveal">
+          <div class="guide-img">
+            <img src="../Images/teams4.jfif" alt="Sita Nair" />
+            <div class="guide-img-overlay"></div>
+            <div class="guide-exp-badge"><i class="ti ti-mountain"></i> 3 yrs</div>
+            <div class="guide-social-strip">
+              <a href="#" class="gs-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+              <a href="#" class="gs-btn" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+              <a href="#" class="gs-btn" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="guide-body">
+            <div class="guide-meta">
+              <div>
+                <div class="guide-name">Sita Nair</div>
+                <div class="guide-role">Kids &amp; Family Guide</div>
+              </div>
+              <div class="guide-rating"><i class="ti ti-star-filled"></i> 5.0</div>
+            </div>
+            <div class="guide-divider"></div>
+            <div class="guide-desc">Specialist in child-safe programming. Every family group is in the best possible
+              hands with Sita leading.</div>
+            <div class="guide-certs">
+              <span class="guide-cert"><i class="ti ti-baby-carriage"></i>Child Safety</span>
+              <span class="guide-cert"><i class="ti ti-heart-plus"></i>First Aid</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+      const cards = document.querySelectorAll('.guide-card');
+
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const idx = Array.from(cards).indexOf(entry.target);
+                entry.target.style.transition =
+                  `opacity 0.52s ease ${idx * 110}ms, transform 0.52s cubic-bezier(0.34,1.56,0.64,1) ${idx * 110}ms, border-color 0.3s, box-shadow 0.3s`;
+                entry.target.classList.add('card-visible');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        cards.forEach((c) => io.observe(c));
+      } else {
+        cards.forEach((c) => c.classList.add('card-visible'));
+      }
+
+
+      const revealEls = document.querySelectorAll('.guides .reveal');
+
+      if ('IntersectionObserver' in window) {
+        const revealIO = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                revealIO.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        revealEls.forEach((el) => revealIO.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+
+      const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
+
+      cards.forEach((card) => {
+        card.addEventListener('click', function (e) {
+          if (!isTouchDevice()) return;
+          const strip = this.querySelector('.guide-social-strip');
+          if (!strip) return;
+
+          if (e.target.closest('.gs-btn')) return;
+          const isOpen = strip.style.transform === 'translateY(0px)' || strip.style.transform === 'translateY(0)';
+          strip.style.transform = isOpen ? 'translateY(100%)' : 'translateY(0)';
+        });
+      });
+
+
+      document.querySelectorAll('.guide-cert').forEach((cert) => {
+        cert.addEventListener('mouseenter', function () {
+          this.style.zIndex = '2';
+        });
+        cert.addEventListener('mouseleave', function () {
+          this.style.zIndex = '';
+        });
+      });
+
+    })();
+  </script>
+  <section class="section testimonials" id="reviews">
+    <div class="container">
+      <div class="testi-header">
+        <div>
+          <div class="eyebrow" style="justify-content:flex-start">Guest Stories</div>
+          <h2 class="section-title reveal" style="text-align:left">Real <span>Thrills</span>,<br />Real Reviews</h2>
+        </div>
+        <a href="#" class="btn-outline reveal">See All Reviews</a>
+      </div>
+
+      <div class="testi-grid">
+
+
+        <div class="testi-card featured reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">Thunder Line is the closest thing to flying I've ever felt. The team briefed us so well
+            that by the time I stepped off the platform, fear had turned into pure excitement. Came back three weekends
+            in a row — this place is addictive.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="../Images/testi1.jfif" alt="Arjun Reddy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <span class="av-init" style="display:none">AR</span>
+            </div>
+            <div>
+              <div class="testi-name">Arjun Reddy</div>
+              <div class="testi-loc">Hyderabad · Repeat Guest</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testi-card reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">Brought my 10-year-old and she absolutely loved every second. The guides were patient
+            and funny — she wouldn't stop talking about it for weeks.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="../Images/testi2.jfif" alt="Priya Mehta"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <span class="av-init" style="display:none">PM</span>
+            </div>
+            <div>
+              <div class="testi-name">Priya Mehta</div>
+              <div class="testi-loc">Bangalore · Family Visit</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testi-card reveal">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">Night Zipline is an entirely different dimension. Stars overhead, forest lit up below —
+            absolutely cinematic. Worth every rupee and then some.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="../Images/testi3.jfif" alt="Siddharth Kapoor"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <span class="av-init" style="display:none">SK</span>
+            </div>
+            <div>
+              <div class="testi-name">Siddharth Kapoor</div>
+              <div class="testi-loc">Nellore · Solo Adventurer</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+
+      const revealEls = document.querySelectorAll('.testimonials .reveal');
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+
+      const cards = document.querySelectorAll('.testi-card');
+
+      if ('IntersectionObserver' in window) {
+        const cardIO = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                const idx = Array.from(cards).indexOf(e.target);
+                e.target.style.transitionDelay = `${idx * 100}ms`;
+                e.target.classList.add('card-visible');
+                cardIO.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        cards.forEach((c) => cardIO.observe(c));
+      } else {
+        cards.forEach((c) => c.classList.add('card-visible'));
+      }
+
+    })();
+  </script>
+  <section class="section events" id="events">
+    <div class="container">
+      <div class="events-header">
+        <div class="eyebrow">What's On</div>
+        <h2 class="section-title reveal">Upcoming <span>Events</span></h2>
+        <p class="section-sub reveal">Mark your calendar — limited-slot experiences across the canopy, all season long.
+        </p>
+      </div>
+
+      <div class="events-grid">
+
+        <div class="timeline-item reveal">
+          <div class="event-card event-featured">
+            <div class="event-img">
+              <img src="../Images/upe1.jfif" alt="Night Zipline Weekend" />
+              <div class="event-img-overlay"></div>
+              <div class="event-tag urgent"><i class="ti ti-flame"></i> Selling Fast</div>
+            </div>
+            <div class="event-body">
+              <div class="event-meta-row">
+                <span class="event-date"><i class="ti ti-calendar-event"></i> 19–20 Jul 2025</span>
+                <span class="event-slots"><i class="ti ti-users"></i> 12 slots left</span>
+              </div>
+              <div class="event-name">Night Zipline Weekend</div>
+              <div class="event-desc">Two nights of forest flying under a canopy of stars. Bonfire, night photography
+                walk, and the legendary Thunder Line after dark.</div>
+
+              <div class="event-countdown" id="countdownNight">
+                <div class="ecd-block"><span class="ecd-num" id="cdN-d">00</span><span class="ecd-lbl">Days</span></div>
+                <div class="ecd-sep">:</div>
+                <div class="ecd-block"><span class="ecd-num" id="cdN-h">00</span><span class="ecd-lbl">Hrs</span></div>
+                <div class="ecd-sep">:</div>
+                <div class="ecd-block"><span class="ecd-num" id="cdN-m">00</span><span class="ecd-lbl">Min</span></div>
+              </div>
+
+              <div class="event-footer">
+                <div class="event-price">₹1,899 <span>/ person</span></div>
+                <a href="#cta" class="btn-gold event-cta"><i class="ti ti-bolt"></i> Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../Images/upe2.jfif" alt="School Trip Package" />
+              <div class="event-img-overlay"></div>
+              <div class="event-tag school"><i class="ti ti-school"></i> School Special</div>
+            </div>
+            <div class="event-body">
+              <div class="event-meta-row">
+                <span class="event-date"><i class="ti ti-calendar-event"></i> Every Sat, Jun–Aug</span>
+                <span class="event-slots"><i class="ti ti-users"></i> Groups 20+</span>
+              </div>
+              <div class="event-name">School Trip Package</div>
+              <div class="event-desc">Tailored half-day adventure programme for students aged 8–17. Includes guided
+                activities, safety workshop, and lunch.</div>
+              <div class="event-footer">
+                <div class="event-price">₹649 <span>/ student</span></div>
+                <a href="#cta" class="btn-primary event-cta"><i class="ti ti-calendar-plus"></i> Enquire</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../Images/upe3.jfif" alt="Diwali Special" />
+              <div class="event-img-overlay"></div>
+              <div class="event-tag diwali"><i class="ti ti-sparkles"></i> Diwali Special</div>
+            </div>
+            <div class="event-body">
+              <div class="event-meta-row">
+                <span class="event-date"><i class="ti ti-calendar-event"></i> 20–23 Oct 2025</span>
+                <span class="event-slots"><i class="ti ti-discount"></i> 20% off</span>
+              </div>
+              <div class="event-name">Diwali Fiesta</div>
+              <div class="event-desc">Celebrate Diwali among the treetops. Decorated trails, festival food stalls, and
+                an illuminated zipline experience the whole family will remember.</div>
+              <div class="event-footer">
+                <div class="event-price">₹1,299 <span>/ person</span></div>
+                <a href="#cta" class="btn-primary event-cta"><i class="ti ti-calendar-plus"></i> Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+      const items = document.querySelectorAll('.timeline-item');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const idx = Array.from(items).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${idx * 120}ms`;
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        items.forEach((c) => io.observe(c));
+      } else {
+        items.forEach((c) => c.classList.add('is-visible'));
+      }
+
+      const revealEls = document.querySelectorAll('.events .reveal');
+      if ('IntersectionObserver' in window) {
+        const rio = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); rio.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        revealEls.forEach((el) => rio.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+
+      function updateCountdown() {
+        const target = new Date('2025-07-19T20:00:00+05:30').getTime();
+        const now = Date.now();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          ['cdN-d', 'cdN-h', 'cdN-m'].forEach((id) => { const el = document.getElementById(id); if (el) el.textContent = '00'; });
+          return;
+        }
+
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+
+        const pad = (n) => String(n).padStart(2, '0');
+        const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = pad(val); };
+
+        setEl('cdN-d', d);
+        setEl('cdN-h', h);
+        setEl('cdN-m', m);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 30000);
+
+    })();
+  </script>
+  <section class="section blog" id="blog">
+    <div class="container">
+      <div class="blog-header">
+        <div class="eyebrow">From the Trail</div>
+        <h2 class="section-title reveal">Tips & <span>Stories</span></h2>
+        <p class="section-sub reveal">Guides, planning advice, and trail stories to help you make the most of your
+          visit.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="../Images/tips1.jfif" alt="What to Wear" />
+            <div class="blog-img-overlay"></div>
+            <span class="blog-cat"><i class="ti ti-hanger"></i> Gear</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span><i class="ti ti-clock"></i> 4 min read</span><span><i
+                  class="ti ti-calendar"></i> Jun 2025</span></div>
+            <h3 class="blog-title">What to Wear for Your First Zipline Visit</h3>
+            <p class="blog-excerpt">Closed-toe shoes, no loose jewellery, fitted clothes — small choices make a big
+              difference to your comfort and safety up in the canopy.</p>
+            <a href="#" class="blog-link">Read article <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="../Images/tips2.jfif" alt="Best Time to Visit" />
+            <div class="blog-img-overlay"></div>
+            <span class="blog-cat"><i class="ti ti-sun"></i> Planning</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span><i class="ti ti-clock"></i> 3 min read</span><span><i
+                  class="ti ti-calendar"></i> May 2025</span></div>
+            <h3 class="blog-title">Best Time to Visit EcoZip — Season Guide</h3>
+            <p class="blog-excerpt">October through February is our sweet spot. Lower humidity, cooler mornings, and
+              clearer skies make for the best ride conditions all year.</p>
+            <a href="#" class="blog-link">Read article <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="../Images/tips3.jfif" alt="Kids Guide" />
+            <div class="blog-img-overlay"></div>
+            <span class="blog-cat"><i class="ti ti-baby-carriage"></i> Family</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span><i class="ti ti-clock"></i> 5 min read</span><span><i
+                  class="ti ti-calendar"></i> Apr 2025</span></div>
+            <h3 class="blog-title">The Parent's Complete Kids Adventure Guide</h3>
+            <p class="blog-excerpt">Age limits, what to pack, how to prepare nervous kids, and which activities are
+              perfect starters before the big day.</p>
+            <a href="#" class="blog-link">Read article <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+      const cards = document.querySelectorAll('.blog-card');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const idx = Array.from(cards).indexOf(entry.target);
+              entry.target.style.transition =
+                `opacity 0.52s ease ${idx * 110}ms, transform 0.52s cubic-bezier(0.34,1.56,0.64,1) ${idx * 110}ms, border-color 0.3s, box-shadow 0.3s`;
+              entry.target.classList.add('card-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        cards.forEach((c) => io.observe(c));
+      } else {
+        cards.forEach((c) => c.classList.add('card-visible'));
+      }
+
+      const revealEls = document.querySelectorAll('.blog .reveal');
+      if ('IntersectionObserver' in window) {
+        const rio = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); rio.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        revealEls.forEach((el) => rio.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+    })();
+  </script>
+  <section class="section location" id="location">
+    <div class="container">
+
+      <div class="location-header">
+        <div class="loc-eyebrow">Find Us</div>
+        <h2 class="section-title reveal" style="text-align:left">Plan Your <span>Visit</span></h2>
+        <p class="location-desc reveal">We're nestled in the forested hills 18 km from Nellore city — close enough for a
+          day trip, far enough to feel like another world entirely.</p>
+      </div>
+
+      <div class="location-inner">
+
+        <div class="location-left reveal">
+          <div class="dist-row">
+            <div class="dist-chip"><i class="ti ti-map-pin"></i>18 km from Nellore</div>
+            <div class="dist-chip"><i class="ti ti-car"></i>35 min from city</div>
+            <div class="dist-chip"><i class="ti ti-clock"></i>Open 7am – 6pm</div>
+            <div class="dist-chip"><i class="ti ti-calendar"></i>Tue – Sun</div>
+          </div>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon"><i class="ti ti-map-pin"></i></div>
+              <div>
+                <div class="info-label">Address</div>
+                <div class="info-val">EcoZip Forest Camp, Penchalakona Hills,<br />Nellore District, Andhra Pradesh 524
+                  004</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="ti ti-phone"></i></div>
+              <div>
+                <div class="info-label">Phone</div>
+                <div class="info-val"><a href="tel:+919440500000" class="info-link">+91 94405 00000</a></div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="ti ti-mail"></i></div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-val"><a href="mailto:hello@ecozipadventures.in"
+                    class="info-link">hello@ecozipadventures.in</a></div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="ti ti-clock"></i></div>
+              <div>
+                <div class="info-label">Operating Hours</div>
+                <div class="info-val">Tuesday – Sunday · 7:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="loc-btns">
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-primary">
+              <i class="ti ti-map"></i>Get Directions
+            </a>
+            <a href="tel:+919440500000" class="btn-outline">
+              <i class="ti ti-phone"></i>Call Us
+            </a>
+          </div>
+        </div>
+
+        <div class="location-right reveal">
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61660.78!2d79.9865!3d14.4426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf4a3a3c4a3a3%3A0x1234567890abcdef!2sNellore%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="EcoZip Adventures location map">
+            </iframe>
+            <div class="map-badge"><i class="ti ti-map-pin"></i>EcoZip Base Camp</div>
+            <div class="map-overlay-strip">
+              <div class="mos-item"><i class="ti ti-navigation"></i><span>18 km from Nellore</span></div>
+              <div class="mos-divider"></div>
+              <div class="mos-item"><i class="ti ti-car"></i><span>35 min drive</span></div>
+              <div class="mos-divider"></div>
+              <div class="mos-item"><i class="ti ti-trees"></i><span>Penchalakona Hills</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+      const revealEls = document.querySelectorAll('.location .reveal');
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry, i) => {
+              if (entry.isIntersecting) {
+
+                const idx = Array.from(revealEls).indexOf(entry.target);
+                entry.target.style.transitionDelay = `${idx * 80}ms`;
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+      const infoItems = document.querySelectorAll('.location .info-item');
+      infoItems.forEach((item, idx) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-16px)';
+        item.style.transition = `opacity 0.42s ease ${120 + idx * 80}ms, transform 0.42s ease ${120 + idx * 80}ms, border-color 0.25s`;
+      });
+
+      if ('IntersectionObserver' in window) {
+        const infoIO = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+                infoIO.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        infoItems.forEach((item) => infoIO.observe(item));
+      } else {
+        infoItems.forEach((item) => {
+          item.style.opacity = '1';
+          item.style.transform = 'none';
+        });
+      }
+
+
+      const chips = document.querySelectorAll('.location .dist-chip');
+      chips.forEach((chip, idx) => {
+        chip.style.opacity = '0';
+        chip.style.transform = 'scale(0.88)';
+        chip.style.transition = `opacity 0.35s ease ${idx * 70}ms, transform 0.35s ease ${idx * 70}ms`;
+      });
+
+      if ('IntersectionObserver' in window) {
+        const chipIO = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'scale(1)';
+                chipIO.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        chips.forEach((chip) => chipIO.observe(chip));
+      } else {
+        chips.forEach((chip) => { chip.style.opacity = '1'; chip.style.transform = 'scale(1)'; });
+      }
+
+    })();
+  </script>
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="nl-inner">
+
+        <div class="nl-left">
+         
+          <div>
+            <div class="nl-eyebrow">Stay in the Loop</div>
+            <h2 class="nl-title">Get 10% Off Your First Booking</h2>
+            <p class="nl-sub">Early access to events, exclusive discounts, and trail tips — straight to your inbox or
+              WhatsApp. No spam, unsubscribe anytime.</p>
+          </div>
+        </div>
+
+        <div class="nl-right">
+          <div class="nl-tabs">
+            <button class="nl-tab active" data-tab="email" aria-pressed="true">
+              <i class="ti ti-mail"></i> Email
+            </button>
+            <button class="nl-tab" data-tab="whatsapp" aria-pressed="false">
+              <i class="ti ti-brand-whatsapp"></i> WhatsApp
+            </button>
+          </div>
+
+          <div class="nl-form-wrap" id="nlFormEmail">
+            <div class="nl-input-row">
+              <div class="nl-input-group">
+                <i class="ti ti-mail nl-input-icon"></i>
+                <input type="email" id="nlEmail" class="nl-input" placeholder="you@example.com" autocomplete="email"
+                  aria-label="Email address" />
+              </div>
+              <button class="nl-submit btn-gold" id="nlEmailBtn" type="button">
+                <i class="ti ti-send"></i> Get 10% Off
+              </button>
+            </div>
+            <p class="nl-note"><i class="ti ti-lock"></i> We never share your details. Unsubscribe in one click.</p>
+          </div>
+
+          <div class="nl-form-wrap" id="nlFormWhatsapp" style="display:none">
+            <div class="nl-input-row">
+              <div class="nl-input-group">
+                <i class="ti ti-phone nl-input-icon"></i>
+                <input type="tel" id="nlPhone" class="nl-input" placeholder="+91 98765 43210" autocomplete="tel"
+                  aria-label="WhatsApp number" />
+              </div>
+              <button class="nl-submit nl-wa-btn" id="nlWaBtn" type="button">
+                <i class="ti ti-brand-whatsapp"></i> Join on WhatsApp
+              </button>
+            </div>
+            <p class="nl-note"><i class="ti ti-lock"></i> We'll only send offers and updates — no spam.</p>
+          </div>
+
+          <div class="nl-success" id="nlSuccess" style="display:none" role="alert">
+            <i class="ti ti-circle-check"></i>
+            <div>
+              <strong>You're in!</strong>
+              <span>Check your inbox — your 10% discount code is on its way.</span>
+            </div>
+          </div>
+
+          <div class="nl-trust">
+            <span><i class="ti ti-users"></i> 3,400+ subscribers</span>
+            <span><i class="ti ti-star-filled"></i> Weekly trail tips</span>
+            <span><i class="ti ti-bell-off"></i> No spam, ever</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+
+    (function () {
+
+
+      const tabs = document.querySelectorAll('.nl-tab');
+      const formEmail = document.getElementById('nlFormEmail');
+      const formWa = document.getElementById('nlFormWhatsapp');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', function () {
+          tabs.forEach((t) => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
+          this.classList.add('active');
+          this.setAttribute('aria-pressed', 'true');
+
+          const target = this.dataset.tab;
+          if (formEmail) formEmail.style.display = target === 'email' ? 'block' : 'none';
+          if (formWa) formWa.style.display = target === 'whatsapp' ? 'block' : 'none';
+        });
+      });
+
+
+      const emailBtn = document.getElementById('nlEmailBtn');
+      if (emailBtn) {
+        emailBtn.addEventListener('click', function () {
+          const input = document.getElementById('nlEmail');
+          const val = input ? input.value.trim() : '';
+          if (!val || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+            if (input) { input.style.borderColor = '#dc2626'; input.focus(); }
+            return;
+          }
+          if (input) input.style.borderColor = '';
+          showSuccess();
+        });
+      }
+
+
+      const waBtn = document.getElementById('nlWaBtn');
+      if (waBtn) {
+        waBtn.addEventListener('click', function () {
+          const input = document.getElementById('nlPhone');
+          const val = input ? input.value.replace(/\D/g, '') : '';
+          if (val.length < 10) {
+            if (input) { input.style.borderColor = '#dc2626'; input.focus(); }
+            return;
+          }
+          if (input) input.style.borderColor = '';
+
+          const msg = encodeURIComponent('Hi EcoZip! I\'d like to get updates and my 10% discount code.');
+          const phone = val.startsWith('91') ? val : '91' + val;
+          window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+          showSuccess();
+        });
+      }
+
+
+      document.querySelectorAll('.nl-input').forEach((inp) => {
+        inp.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            const activeTab = document.querySelector('.nl-tab.active');
+            if (activeTab && activeTab.dataset.tab === 'whatsapp') {
+              const btn = document.getElementById('nlWaBtn');
+              if (btn) btn.click();
+            } else {
+              const btn = document.getElementById('nlEmailBtn');
+              if (btn) btn.click();
+            }
+          }
+
+          inp.style.borderColor = '';
+        });
+      });
+
+      function showSuccess() {
+        const emailForm = document.getElementById('nlFormEmail');
+        const waForm = document.getElementById('nlFormWhatsapp');
+        const success = document.getElementById('nlSuccess');
+        if (emailForm) emailForm.style.display = 'none';
+        if (waForm) waForm.style.display = 'none';
+        if (success) success.style.display = 'flex';
+      }
+
+    })();
+  </script>
+
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
+
+</body>
+
+</html>
