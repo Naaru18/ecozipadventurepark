@@ -78,28 +78,20 @@
   </div>
 
   <script>
-    (function () {
-      const inner = document.getElementById('trustInner');
-      if (window.innerWidth <= 768) {
-        const clone = inner.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        inner.parentNode.appendChild(clone);
-      }
-    })();
-
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.hero-stat .num[data-target]').forEach(el => {
-        const end = parseInt(el.dataset.target);
-        const suffix = el.dataset.suffix || '';
-        let cur = 0;
-        const step = end / 60;
-        const timer = setInterval(() => {
-          cur = Math.min(cur + step, end);
-          el.textContent = Math.round(cur) + suffix;
-          if (cur >= end) clearInterval(timer);
-        }, 20);
-      });
-    });
+   
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero-stat .num[data-target]').forEach(el => {
+    const end = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    let cur = 0;
+    const step = end / 60;
+    const timer = setInterval(() => {
+      cur = Math.min(cur + step, end);
+      el.textContent = Math.round(cur) + suffix;
+      if (cur >= end) clearInterval(timer);
+    }, 20);
+  });
+});
   </script>
   <section class="section activities" id="activities">
     <div class="container">
