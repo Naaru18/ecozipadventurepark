@@ -1,7 +1,7 @@
 .home2-hero {
   position: relative;
-  height: 90vh;
-  min-height: 90vh;
+  height: 85vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,7 @@
     linear-gradient(rgba(5, 46, 22, 0.75),
       rgba(5, 46, 22, 0.75)),
     url("Images/home2bg.jpg") center/cover no-repeat;
+    margin-top: 60px;
 }
 
 .home2-hero::before {

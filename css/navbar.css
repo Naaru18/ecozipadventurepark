@@ -57,17 +57,7 @@ body {
   overflow: hidden;
 }
 
-.ez-logo-icon::after {
-  content: '';
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--secondary);
-  opacity: 0.8;
-}
+
 
 .ez-logo-text {
   display: flex;

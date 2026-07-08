@@ -6,7 +6,6 @@
   background: var(--sbg1);
 }
 
-/* ===== Left visual side — centered both axes ===== */
 .auth-visual {
   position: relative;
   background: var(--hero-bg);
@@ -115,8 +114,6 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
-/* ===== Right form side — compact so it fits 100vh ===== */
 .auth-formside {
   position: relative;
   display: flex;
@@ -184,17 +181,6 @@
   overflow: hidden;
 }
 
-.ez-logo-icon::after {
-  content: '';
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--secondary);
-  opacity: 0.8;
-}
 
 .ez-logo-text {
   display: flex;
