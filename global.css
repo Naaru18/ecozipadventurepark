@@ -8,13 +8,27 @@
 html,
 body{
   width:100%;
-  
+ 
 }
 .page-wrapper {
   overflow-x: hidden;
 }
-body{
-  margin:0;
+
+@media(max-width:360px) {
+  body {
+    padding: 0 10px;
+  }
+}
+
+@media(max-width:768px) {
+  body {
+    padding: 0 10px;
+  }
+}
+@media(max-width:1024px) {
+  body {
+    padding: 0 10px;
+  }
 }
 :root {
   --primary: #16a34a;

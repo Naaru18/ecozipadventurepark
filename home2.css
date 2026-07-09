@@ -93,7 +93,7 @@
 
 .hero-stat {
   min-width: 150px;
-  padding: 0px 18px 20px 18px;
+  padding: 20px 18px 20px 18px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);

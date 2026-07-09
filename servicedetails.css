@@ -1090,6 +1090,7 @@
   min-height: 48px;
 }
 
+
 .pricing-feats {
   display: flex;
   flex-direction: column;
@@ -1097,9 +1098,9 @@
   margin-bottom: 24px;
   flex: 1;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
-
 .pricing-feat {
   font-size: 0.82rem;
   color: var(--text-second, var(--color-text-secondary));
