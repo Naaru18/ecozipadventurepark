@@ -201,6 +201,8 @@
 
   .banner-stat {
     padding: 16px;
+    
+    margin: 0px 10px;
   }
 
   .banner-stat .num,
@@ -463,6 +465,7 @@
   .story-intro__actions {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .story-intro__actions a,

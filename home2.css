@@ -204,19 +204,19 @@
     line-height: 1.6;
     margin-bottom: 18px;
   }
+.home2-hero-actions {
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
 
-  .home2-hero-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .home2-hero-actions .btn-primary,
-  .home2-hero-actions .btn-outline {
-    width: 80%;
-    justify-content: center;
-  }
+.home2-hero-actions .btn-primary,
+.home2-hero-actions .btn-outline {
+  width: 80%;
+  justify-content: center;
+}
 
   .home2-hero-stats {
     gap: 8px;
@@ -1932,7 +1932,6 @@
 }
 
 
-.location-right {}
 
 .map-wrap {
   position: relative;
@@ -2116,15 +2115,16 @@ body.dark .map-wrap iframe {
     font-size: 0.8rem;
   }
 
-  .loc-btns {
-    flex-direction: column;
-  }
+ .loc-btns {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .loc-btns .btn-primary,
-  .loc-btns .btn-outline {
-    width: 80%;
-    justify-content: center;
-  }
+.loc-btns .btn-primary,
+.loc-btns .btn-outline {
+  width: 80%;
+  justify-content: center;
+}
 
   .map-overlay-strip {
     padding: 10px 8px;
@@ -2433,7 +2433,7 @@ body.dark .map-wrap iframe {
 
 @media (max-width: 768px) {
   .newsletter {
-    padding: 48px 0;
+    padding: 48px 10px;
   }
 
   .nl-left {
@@ -2466,7 +2466,7 @@ body.dark .map-wrap iframe {
 
 @media (max-width: 360px) {
   .newsletter {
-    padding: 40px 0;
+    padding: 40px 10px;
   }
 
   .nl-title {

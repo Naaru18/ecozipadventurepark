@@ -23,76 +23,108 @@
   <div id="navbar"></div>
 
 
-  <section class="hero">
-    <div class="hero-bg-img"></div>
-    <div class="hero-overlay"></div>
+ 
+  <section class="hero-banner">
+  <div class="hero-bg-layer">
+    <img src="../Images/hero-bg.jpg" alt="EcoZip Adventure Park canopy">
+  </div>
+  <canvas id="heroParticles"></canvas>
 
-    <div class="hero-inner">
-      <div class="hero-tag">
-        <i class="ti ti-map-pin" aria-hidden="true"></i> Coorg, Karnataka · Open Daily
-      </div>
-
-      <h1 class="hero-title">
-        FLY ABOVE<br><span>THE</span> <span class="gold">JUNGLE</span>
-      </h1>
-
-      <p class="hero-desc">
-        India's most thrilling zipline &amp; adventure park. Six adrenaline experiences, zero compromises on safety —
-        set deep in the Western Ghatsgit add .
-      </p>
-
-      <div class="hero-btns">
-        <a href="#pricing" class="btn-gold">
-          <i class="ti ti-calendar-plus" aria-hidden="true"></i> Book Now
-        </a>
-        <a href="#activities" class="btn-outline-white">
-          <i class="ti ti-player-play" aria-hidden="true"></i> Watch Video
-        </a>
-      </div>
-
-
+  <div class="container hero-inner">
+    <div class="hero-tag">
+      <i class="fas fa-leaf"></i> Nellore's Premier Adventure Park
     </div>
 
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="scroll-dot"></div>
-      <span>Scroll</span>
+    <h1 class="hero-title">
+      Fly Through  <span>Canopy & Wild</span>
+     
+    </h1>
+
+    <p class="hero-sub">
+      12+ zipline routes carved through untouched forest terrain. Book your slot and experience adventure the way it's meant to be — fast, high, and unforgettable.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#booking" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Your Slot</a>
+      <a href="#routes" class="btn-outline"><i class="fas fa-route"></i> Explore Routes</a>
     </div>
-  </section>
-  <div class="trust-strip">
-    <div class="trust-track-wrap">
-      <div class="trust-inner" id="trustInner">
-        <div class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> EN 15567 Certified</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><i class="ti ti-award" aria-hidden="true"></i> Best Adventure Park 2024</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><i class="ti ti-star-filled" style="color:var(--secondary)" aria-hidden="true"></i> 4.9
-          / 5 on Google</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><i class="ti ti-first-aid-kit" aria-hidden="true"></i> On-Site Paramedics</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><i class="ti ti-leaf" aria-hidden="true"></i> Zero Deforestation</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><i class="ti ti-users" aria-hidden="true"></i> 12,000+ Guests Served</div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span>12+</span>
+        <small>Zipline Routes</small>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span>50K+</span>
+        <small>Riders Yearly</small>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span>4.9★</span>
+        <small>Average Rating</small>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span>900m</span>
+        <small>Longest Line</small>
       </div>
     </div>
   </div>
 
-  <script>
-   
-window.addEventListener('load', () => {
-  document.querySelectorAll('.hero-stat .num[data-target]').forEach(el => {
-    const end = parseInt(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
-    let cur = 0;
-    const step = end / 60;
-    const timer = setInterval(() => {
-      cur = Math.min(cur + step, end);
-      el.textContent = Math.round(cur) + suffix;
-      if (cur >= end) clearInterval(timer);
-    }, 20);
-  });
-});
-  </script>
+  <div class="hero-scroll-cue">
+    <span></span>
+    <small>Scroll</small>
+  </div>
+
+  <div class="hero-divider"></div>
+</section>
+
+<script>
+(function () {
+  const canvas = document.getElementById('heroParticles');
+  const ctx = canvas.getContext('2d');
+  const hero = canvas.closest('.hero-banner');
+  let w, h, particles = [];
+
+  function resize() {
+    w = canvas.width = hero.offsetWidth;
+    h = canvas.height = hero.offsetHeight;
+  }
+
+  function initParticles() {
+    const count = window.innerWidth < 768 ? 22 : 45;
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 2 + 0.6,
+      vy: Math.random() * 0.4 + 0.15,
+      vx: (Math.random() - 0.5) * 0.3,
+      o: Math.random() * 0.5 + 0.2
+    }));
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => {
+      p.y -= p.vy;
+      p.x += p.vx;
+      if (p.y < -10) { p.y = h + 10; p.x = Math.random() * w; }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(202, 138, 4, ${p.o})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  resize();
+  initParticles();
+  animate();
+
+  window.addEventListener('resize', () => { resize(); initParticles(); });
+})();
+</script>
   <section class="section activities" id="activities">
     <div class="container">
       <div class="eyebrow">What We Offer</div>

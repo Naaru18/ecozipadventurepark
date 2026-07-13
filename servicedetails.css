@@ -64,28 +64,30 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .btn-primary {
     text-align: center;
     justify-content: center;
     align-items: center;
+    width: 80%;
   }
 
   .btn-outline-secondary {
     text-align: center;
     justify-content: center;
     align-items: center;
+    
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .service-details-hero {
-    min-height: 40vh;
-    height: auto;
-    padding: 60px 0;
+    margin-top: 50px;
+    padding: 60px 10px;
   }
-
 
   .service-details-hero .section-title {
     font-size: 2.4rem;
@@ -94,7 +96,7 @@
 
 @media (max-width: 1024px) {
   .service-details-hero {
-    min-height: 70vh;
+
     padding: 100px 22px;
   }
 
