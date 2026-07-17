@@ -1,63 +1,58 @@
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
-body{
-  width:100%;
- 
+body {
+  width: 100%;
+
 }
+
 .page-wrapper {
   overflow-x: hidden;
 }
 
-@media(max-width:360px) {
-  body {
-    padding: 0 10px;
-  }
-}
-
-@media(max-width:768px) {
-  body {
-    padding: 0 10px;
-  }
-}
-@media(max-width:1024px) {
-  body {
-    padding: 0 10px;
-  }
-}
 :root {
-  --primary: #16a34a;
-  --secondary: #ca8a04;
-  --text-one: #000;
-  --text-second: #374151;
+  --primary: #FF9D00;
+  --secondary: #16a34a;
+
+  --hover: 0 20px 52px rgba(255, 157, 0, 0.15);
+  --g-bg: rgba(255, 157, 0, 0.121);
+  --text-one: #000000;
+  --text-second: #111111;
   --sbg1: #ffffff;
-  --sbg2: #f0fdf4;
-  --card-bg: #dcfce7;
-  --hero-bg: #052e16;
-  --primary-10: rgba(22, 163, 74, 0.1);
-  --primary-15: rgba(22, 163, 74, 0.15);
-  --primary-20: rgba(22, 163, 74, 0.2);
-  --secondary-10: rgba(202, 138, 4, 0.12);
+  --sbg2: #fff7ed;
+  --card-bg: #ffedd5;
+  --hero-bg: #062c01;
+
+  --primary-10: rgba(255, 180, 0, 0.1);
+  --primary-15: rgba(255, 180, 0, 0.15);
+  --primary-20: rgba(255, 180, 0, 0.2);
+  --secondary-10: rgba(160, 98, 61, 0.12);
+  --secondary-15: rgba(160, 98, 61, 0.18);
+  --secondary-20: rgba(160, 98, 61, 0.25);
 }
 
 body.dark {
-  --primary: #16a34a;
-  --secondary: #ca8a04;
+  --primary: #FF9D00;
+  --secondary: #16a34a;
+  --g-bg: rgba(255, 157, 0, 0.121);
+  --hover: 0 20px 52px rgba(255, 157, 0, 0.15);
   --text-one: #ffffff;
   --text-second: #d1d5db;
   --sbg1: #000000;
-  --sbg2: #111111;
-  --card-bg: #0a1f10;
-  --hero-bg: #020d05;
-  --primary-10: rgba(22, 163, 74, 0.12);
-  --primary-15: rgba(22, 163, 74, 0.18);
-  --primary-20: rgba(22, 163, 74, 0.22);
-  --secondary-10: rgba(202, 138, 4, 0.15);
+  --sbg2: #0f0a05;
+  --card-bg: #000000;
+  --hero-bg: #062c01;
+
+  --primary-10: rgba(255, 199, 54, 0.12);
+  --primary-15: rgba(255, 199, 54, 0.18);
+  --primary-20: rgba(255, 199, 54, 0.24);
+  --secondary-10: rgba(193, 125, 79, 0.15);
+  --secondary-15: rgba(193, 125, 79, 0.2);
+  --secondary-20: rgba(193, 125, 79, 0.28);
 }
 
 body {
@@ -157,7 +152,7 @@ body {
   font-weight: 700;
   padding: 11px 24px;
   border-radius: 6px;
-  background: var(--secondary);
+  background: var(--primary);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -203,7 +198,7 @@ body {
   border-radius: 6px;
   background: transparent;
   color: var(--secondary);
-  border: 1.5px solid var(--secondary);
+  border: 1.5px solid var(--primary);
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
@@ -235,4 +230,23 @@ body {
 .btn-gold:hover {
   opacity: 0.88;
   transform: translateY(-1px);
+}
+
+
+@media(max-width:360px) {
+  body {
+    padding: 0 10px;
+  }
+}
+
+@media(max-width:768px) {
+  body {
+    padding: 0 10px;
+  }
+}
+
+@media(max-width:1024px) {
+  body {
+    padding: 0 10px;
+  }
 }

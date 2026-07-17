@@ -1,130 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/navbar.css">
-   <link rel="stylesheet" href="../global.css">
-    
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../global.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
 </head>
+
 <body>
-    <nav class="ez-nav-root" id="ezNav">
-  <div class="ez-nav-container">
-    <a href="../index.html" class="ez-brand">
-      <div class="ez-logo-icon"><i class="fas fa-leaf"></i></div>
-      <div class="ez-logo-text">
-        <span class="ez-logo-main">EcoZip</span>
-        <span class="ez-logo-sub">Adventure Park</span>
-      </div>
-    </a>
+  <nav class="ez-nav-root" id="ezNav">
+    <div class="ez-nav-container">
+      <a href="../index.html" class="ez-brand">
+        <div class="ez-logo-icon">
+          <img src="../Images/logo.png" alt="EcoZip Logo">
+        </div>
+        <div class="ez-logo-text">
+          <span class="ez-logo-main">EcoZip</span>
+          <span class="ez-logo-sub">Adventure Park</span>
+        </div>
+      </a>
 
-    <div class="ez-links-wrap" id="ezLinksWrap">
+      <div class="ez-links-wrap" id="ezLinksWrap">
 
-      <div class="ez-item ez-has-sub">
-        <a href="../index.html" class="ez-link active">
-          Home <i class="fas fa-chevron-down ez-caret"></i>
-        </a>
-        <div class="ez-submenu">
-          <a href="../index.html" class="ez-sub-link">
-            <span class="ez-sub-icon"><i class="fas fa-house"></i></span>
-            <span class="ez-sub-text"><strong>Home Classic</strong><small>Original layout</small></span>
+        <div class="ez-item ez-has-sub">
+          <a href="../index.html" class="ez-link active">
+            Home <i class="fas fa-chevron-down ez-caret"></i>
           </a>
-          <a href="../home2.html" class="ez-sub-link">
-            <span class="ez-sub-icon"><i class="fas fa-star"></i></span>
-            <span class="ez-sub-text"><strong>Home 2</strong><small>Alternative layout</small></span>
-          </a>
+          <div class="ez-submenu">
+            <a href="../index.html" class="ez-sub-link">
+              <span class="ez-sub-icon"><i class="fas fa-house"></i></span>
+              <span class="ez-sub-text"><strong>Home Classic</strong><small>Original layout</small></span>
+            </a>
+            <a href="../home2.html" class="ez-sub-link">
+              <span class="ez-sub-icon"><i class="fas fa-star"></i></span>
+              <span class="ez-sub-text"><strong>Home 2</strong><small>Alternative layout</small></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ez-item">
+          <a href="../about.html" class="ez-link">About</a>
+        </div>
+        <div class="ez-item">
+          <a href="../service.html" class="ez-link">Services</a>
+        </div>
+        <div class="ez-item">
+          <a href="../blog.html" class="ez-link">Blogs</a>
+        </div>
+        <div class="ez-item">
+          <a href="../contact.html" class="ez-link">Contact</a>
+        </div>
+        <div class="ez-item">
+          <a href="../dashboard.html" class="ez-link">Dashboard</a>
         </div>
       </div>
 
-      <div class="ez-item">
-        <a href="../about.html" class="ez-link">About</a>
+      <div class="ez-actions">
+        <a href="../login.html" class="ez-action-btn">
+          <i class="fa-solid fa-user"></i> Login
+        </a>
+        <button class="ez-theme-btn" id="rtlToggle" title="Toggle RTL">
+          <i class="fas fa-right-left"></i>
+        </button>
+        <button class="ez-theme-btn" id="ezThemeBtn" title="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="ez-menu-btn" id="ezMenuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <div class="ez-item">
-        <a href="../service.html" class="ez-link">Services</a>
-      </div>
-      <div class="ez-item">
-        <a href="../blog.html" class="ez-link">Blogs</a>
-      </div>
-      <div class="ez-item">
-        <a href="../contact.html" class="ez-link">Contact</a>
-      </div>
- <div class="ez-item">
-        <a href="../dashboard.html" class="ez-link">Dashboard</a>
-      </div>
-    </div>
 
-    <div class="ez-actions">
-      <a href="../login.html" class="ez-action-btn">
-        <i class="fa-solid fa-user"></i> Login
-      </a>
-      <button class="ez-theme-btn" id="rtlToggle" title="Toggle RTL">
-        <i class="fas fa-right-left"></i>
-      </button>
-      <button class="ez-theme-btn" id="ezThemeBtn" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <button class="ez-menu-btn" id="ezMenuBtn" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
+  </nav>
+  <div class="ez-drawer" id="ezDrawer">
+    <div class="ez-drawer-inner">
 
+      <div class="ez-mob-item">
+        <button class="ez-mob-link ez-mob-has-sub" data-target="mob-home">
+          <span><i class="fas fa-house"></i> Home</span>
+          <i class="fas fa-chevron-down ez-mob-caret"></i>
+        </button>
+        <div class="ez-mob-sub" id="mob-home">
+          <a href="../index.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home Classic</a>
+          <a href="../home2.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home 2</a>
+        </div>
+      </div>
+
+      <div class="ez-mob-item">
+        <a href="../about.html" class="ez-mob-link">
+          <span><i class="fas fa-circle-info"></i> About</span>
+        </a>
+      </div>
+      <div class="ez-mob-item">
+        <a href="../service.html" class="ez-mob-link">
+          <span><i class="fas fa-circle-info"></i> Services</span>
+        </a>
+      </div>
+      <div class="ez-mob-item">
+        <a href="../blog.html" class="ez-mob-link">
+          <span><i class="fas fa-blog"></i> Blogs</span>
+        </a>
+      </div>
+      <div class="ez-mob-item">
+        <a href="../contact.html" class="ez-mob-link">
+          <span><i class="fas fa-envelope"></i> Contact</span>
+        </a>
+      </div>
+      <div class="ez-mob-item">
+        <a href="../dashboard.html" class="ez-mob-link">
+          <span><i class="fas fa-gauge"></i> Dashboard</span>
+        </a>
+      </div>
+
+      <div class="ez-mob-actions">
+        <a href="../login.html" class="ez-mob-action-btn">
+          <i class="fa-solid fa-user"></i> Login
+        </a>
+      </div>
+
+    </div>
   </div>
-</nav>
-<div class="ez-drawer" id="ezDrawer">
-  <div class="ez-drawer-inner">
 
-    <div class="ez-mob-item">
-      <button class="ez-mob-link ez-mob-has-sub" data-target="mob-home">
-        <span><i class="fas fa-house"></i> Home</span>
-        <i class="fas fa-chevron-down ez-mob-caret"></i>
-      </button>
-      <div class="ez-mob-sub" id="mob-home">
-        <a href="../index.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home Classic</a>
-        <a href="../home2.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home 2</a>
-      </div>
-    </div>
-
-    <div class="ez-mob-item">
-      <a href="../about.html" class="ez-mob-link">
-        <span><i class="fas fa-circle-info"></i> About</span>
-      </a>
-    </div>
-    <div class="ez-mob-item">
-      <a href="../service.html" class="ez-mob-link">
-        <span><i class="fas fa-circle-info"></i> Services</span>
-      </a>
-    </div>
-    <div class="ez-mob-item">
-      <a href="../blog.html" class="ez-mob-link">
-        <span><i class="fas fa-blog"></i> Blogs</span>
-      </a>
-    </div>
-    <div class="ez-mob-item">
-      <a href="../contact.html" class="ez-mob-link">
-        <span><i class="fas fa-envelope"></i> Contact</span>
-      </a>
-    </div>
-    <div class="ez-mob-item">
-      <a href="../dashboard.html" class="ez-mob-link">
-        <span><i class="fas fa-gauge"></i> Dashboard</span>
-      </a>
-    </div>
-
-    <div class="ez-mob-actions">
-      <a href="../login.html" class="ez-mob-action-btn">
-        <i class="fa-solid fa-user"></i> Login
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<script src="../js/components.js"></script>
+  <script src="../js/components.js"></script>
 
 </body>
+
 </html>

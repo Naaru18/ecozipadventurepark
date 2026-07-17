@@ -8,7 +8,10 @@
 
 .auth-visual {
   position: relative;
-  background: var(--hero-bg);
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5));
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
   display: flex;
@@ -57,7 +60,7 @@
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 700;
   margin-bottom: 16px;
 }
@@ -66,7 +69,15 @@
   content: '';
   width: 28px;
   height: 2px;
-  background: var(--secondary);
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.auth-visual .tag::after {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
   border-radius: 2px;
 }
 
@@ -85,7 +96,7 @@
 .auth-visual p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #cbd5c9;
+  color: #ffffff;
   max-width: 380px;
   margin: 0;
 }
@@ -104,7 +115,7 @@
   display: block;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem;
-  color: var(--secondary);
+  color: var(--primary);
   letter-spacing: 0.02em;
 }
 
@@ -114,6 +125,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
 .auth-formside {
   position: relative;
   display: flex;
@@ -155,7 +167,20 @@
 .auth-card {
   width: 100%;
   max-width: 400px;
+
+  background: var(--sbg2);
+  border: 1px solid var(--primary);
+  border-radius: 16px;
+
+  padding: 35px 30px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
 }
+
+
 
 .ez-brand {
   display: flex;
@@ -181,6 +206,18 @@
   overflow: hidden;
 }
 
+.ez-logo-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
+.ez-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .ez-logo-text {
   display: flex;
@@ -234,6 +271,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+}
+
+.af-input-wrap:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .af-input-wrap i.left-icon {
@@ -333,7 +378,6 @@
   background: var(--border-col);
 }
 
-/* Google / Apple in one row */
 .af-socials {
   display: flex;
   flex-direction: row;
@@ -349,8 +393,8 @@
   gap: 8px;
   padding: 11px 10px;
   border-radius: 9px;
-  border: 1.5px solid var(--border-col);
-  background: var(--sbg2);
+  border: 1.5px solid var(--primary);
+  background: var(--card-bg);
   color: var(--text-one);
   font-size: 0.82rem;
   font-weight: 600;
@@ -360,6 +404,12 @@
   font-family: 'Inter', sans-serif;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.af-social-btn:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--primary-20);
 }
 
 .af-social-btn span {
@@ -404,6 +454,7 @@
 .af-footer a:hover {
   text-decoration: underline;
 }
+
 @media (min-width:1025px) {
   body {
     overflow: hidden;
@@ -417,6 +468,7 @@
     overflow-y: hidden;
   }
 }
+
 @media (max-width: 1279px) {
   .auth-shell {
     height: auto;
@@ -427,7 +479,7 @@
     overflow-y: visible;
   }
 
-  /* form comes first */
+
   .auth-formside {
     order: 1;
     overflow-y: visible;
@@ -464,6 +516,7 @@
     right: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .auth-formside {
     padding: 28px 20px 32px;
@@ -539,13 +592,13 @@
     flex-wrap: wrap;
     gap: 8px;
   }
- 
+
 
   .top-controls {
     top: 12px;
     right: 14px;
-   
-   
+
+
   }
 
   .icon-toggle {
@@ -553,9 +606,11 @@
     height: 32px;
     font-size: 0.8rem;
   }
-.ez-brand{
-  padding-top: 20px;
-}
+
+  .ez-brand {
+    padding-top: 20px;
+  }
+
   .auth-visual {
     height: 220px;
     min-height: 220px;
@@ -616,4 +671,20 @@
     max-height: 100vh;
     max-height: 100dvh;
   }
+}
+
+
+html[dir="rtl"] .af-field input {
+  padding-left: 14px;
+  padding-right: 40px;
+}
+
+html[dir="rtl"] .af-input-wrap i.left-icon {
+  left: auto;
+  right: 14px;
+}
+
+html[dir="rtl"] .af-input-wrap .eye-toggle {
+  right: auto;
+  left: 14px;
 }

@@ -1,544 +1,908 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecozip Adventure - Dashboard</title>
 
-    <link rel="stylesheet" href="../dashboard.css">
-   <link rel="stylesheet" href="../global.css">
-   
-      <link rel="icon" type="image/png" href="../Images/icon.png">
-   
-  
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecozip Adventure - Dashboard</title>
+
+  <link rel="stylesheet" href="../dashboard.css">
+  <link rel="stylesheet" href="../global.css">
+
+  <link rel="icon" type="image/png" href="../Images/icon.png">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
 </head>
+
 <body>
-<div class="sidebar-overlay" id="overlay"></div>
+  <div class="sidebar-overlay" id="overlay"></div>
 
-<div class="dash-shell">
+  <div class="dash-shell">
 
-  
-  <aside class="sidebar" id="sidebar">
-    <a href="../index.html" class="ez-brand">
-      <div class="ez-logo-icon"><i class="fas fa-leaf"></i></div>
-      <div class="ez-logo-text">
-        <span class="ez-logo-main">EcoZip</span>
-        <span class="ez-logo-sub">Adventure Park</span>
-      </div>
-    </a>
 
-    <div class="nav-group-label">Overview</div>
-    <div class="nav-link active" data-target="overview"><i class="fas fa-grip"></i> Dashboard</div>
-
-    <div class="nav-group-label">Operations</div>
-    <div class="nav-link" data-target="bookings"><i class="fas fa-ticket"></i> Bookings <span class="nav-badge">14</span></div>
-    <div class="nav-link" data-target="routes"><i class="fas fa-route"></i> Routes &amp; Courses</div>
-    <div class="nav-link" data-target="staff"><i class="fas fa-users-gear"></i> Staff Schedule</div>
-
-    <div class="nav-group-label">Insights</div>
-    <div class="nav-link" data-target="customers"><i class="fas fa-id-card"></i> Customers</div>
-    <div class="nav-link" data-target="revenue"><i class="fas fa-chart-line"></i> Revenue Reports</div>
-    <div class="nav-link" data-target="reviews"><i class="fas fa-star"></i> Reviews</div>
-
-    <div class="nav-group-label">Account</div>
-    <div class="nav-link" data-target="settings"><i class="fas fa-gear"></i> Settings</div>
-<div class="sidebar-footer">
-  <div class="nav-link logout-link" onclick="logout()">
-    <i class="fas fa-right-from-bracket"></i> Logout
-  </div>
-</div>
-  </aside>
-
-  
-  <div class="main-area">
-
-    
-    <div class="topbar">
-      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
-      <div class="topbar-search">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search bookings, customers, staff...">
-      </div>
-      <div class="topbar-actions">
-        <button class="icon-toggle" id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-toggle" id="rtlToggle" title="Toggle RTL">
-  <i class="fas fa-right-left"></i>
-</button>
-
-        <div class="action-wrap">
-          <button class="icon-toggle" id="notifBtn"><i class="fas fa-bell"></i><span class="notif-dot"></span></button>
-          <div class="dropdown" id="notifDropdown">
-            <div class="dropdown-header">Notifications</div>
-            <div class="notif-item">
-              <div class="notif-icon"><i class="fas fa-ticket"></i></div>
-              <div><p>New booking for Forest Canopy Zipline — group of 6.</p><small>4 minutes ago</small></div>
-            </div>
-            <div class="notif-item">
-              <div class="notif-icon"><i class="fas fa-star"></i></div>
-              <div><p>New 5-star review from Priya R. on the Twin Falls course.</p><small>1 hour ago</small></div>
-            </div>
-            <div class="notif-item">
-              <div class="notif-icon"><i class="fas fa-triangle-exclamation"></i></div>
-              <div><p>Route safety check due tomorrow for Canyon Drop course.</p><small>3 hours ago</small></div>
-            </div>
-          </div>
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="ez-brand">
+        <div class="ez-logo-icon">
+          <img src="../Images/logo.png" alt="EcoZip Logo">
         </div>
+        <div class="ez-logo-text">
+          <span class="ez-logo-main">EcoZip</span>
+          <span class="ez-logo-sub">Adventure Park</span>
+        </div>
+      </a>
 
-        <div class="action-wrap">
-          <div class="profile-trigger" id="profileBtn">
-            <div class="profile-avatar">RK</div>
-            <div class="profile-meta"><span>Ravi Kumar</span><small>Park Admin</small></div>
-            <i class="fas fa-chevron-down" style="font-size:0.7rem;color:var(--text-second);"></i>
-          </div>
-          <div class="dropdown profile-dropdown" id="profileDropdown">
-            <a><i class="fas fa-user"></i> My Profile</a>
-            <a><i class="fas fa-gear"></i> Account Settings</a>
-            <a class="danger"><i class="fas fa-right-from-bracket"></i> Logout</a>
-          </div>
+      <div class="nav-group-label">Overview</div>
+      <div class="nav-link active" data-target="overview"><i class="fas fa-grip"></i> Dashboard</div>
+
+      <div class="nav-group-label">Operations</div>
+      <div class="nav-link" data-target="bookings"><i class="fas fa-ticket"></i> Bookings <span
+          class="nav-badge">14</span></div>
+      <div class="nav-link" data-target="routes"><i class="fas fa-route"></i> Routes &amp; Courses</div>
+      <div class="nav-link" data-target="staff"><i class="fas fa-users-gear"></i> Staff Schedule</div>
+
+      <div class="nav-group-label">Insights</div>
+      <div class="nav-link" data-target="customers"><i class="fas fa-id-card"></i> Customers</div>
+      <div class="nav-link" data-target="revenue"><i class="fas fa-chart-line"></i> Revenue Reports</div>
+      <div class="nav-link" data-target="reviews"><i class="fas fa-star"></i> Reviews</div>
+
+      <div class="nav-group-label">Account</div>
+      <div class="nav-link" data-target="settings"><i class="fas fa-gear"></i> Settings</div>
+      <div class="sidebar-footer">
+        <div class="nav-link logout-link" onclick="logout()">
+          <i class="fas fa-right-from-bracket"></i> Logout
         </div>
       </div>
-    </div>
+    </aside>
 
-    
-    <div class="content">
 
-      
-      <section class="page-section active" id="overview">
-        <div class="welcome-banner">
-          <div>
-            <h2>Welcome back, <span>Ravi</span> 👋</h2>
-            <p>Here's what's happening across EcoZip Adventures today, June 30, 2026.</p>
-          </div>
-          <a class="btn-primary"><i class="fas fa-plus"></i> New Booking</a>
+    <div class="main-area">
+
+
+      <div class="topbar">
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <div class="topbar-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search bookings, customers, staff...">
         </div>
+        <div class="topbar-actions">
+          <button class="icon-toggle" id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-toggle" id="rtlToggle" title="Toggle RTL">
+            <i class="fas fa-right-left"></i>
+          </button>
 
-        <div class="metric-grid">
-          <div class="metric-card">
-            <div class="metric-top"><div class="metric-icon green"><i class="fas fa-ticket"></i></div><span class="metric-change up">+12.4%</span></div>
-            <h3>248</h3><p>Bookings This Week</p>
+          <div class="action-wrap">
+            <button class="icon-toggle" id="notifBtn"><i class="fas fa-bell"></i><span
+                class="notif-dot"></span></button>
+            <div class="dropdown" id="notifDropdown">
+              <div class="dropdown-header">Notifications</div>
+              <div class="notif-item">
+                <div class="notif-icon"><i class="fas fa-ticket"></i></div>
+                <div>
+                  <p>New booking for Forest Canopy Zipline — group of 6.</p><small>4 minutes ago</small>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-icon"><i class="fas fa-star"></i></div>
+                <div>
+                  <p>New 5-star review from Priya R. on the Twin Falls course.</p><small>1 hour ago</small>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                <div>
+                  <p>Route safety check due tomorrow for Canyon Drop course.</p><small>3 hours ago</small>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="metric-card">
-            <div class="metric-top"><div class="metric-icon gold"><i class="fas fa-indian-rupee-sign"></i></div><span class="metric-change up">+8.1%</span></div>
-            <h3>₹4.82L</h3><p>Revenue This Month</p>
-          </div>
-          <div class="metric-card">
-            <div class="metric-top"><div class="metric-icon blue"><i class="fas fa-user-group"></i></div><span class="metric-change up">+5.6%</span></div>
-            <h3>1,940</h3><p>Active Customers</p>
-          </div>
-          <div class="metric-card">
-            <div class="metric-top"><div class="metric-icon red"><i class="fas fa-star-half-stroke"></i></div><span class="metric-change down">-0.2%</span></div>
-            <h3>4.7</h3><p>Average Park Rating</p>
+
+          <div class="action-wrap">
+            <div class="profile-trigger" id="profileBtn">
+              <div class="profile-avatar">RK</div>
+              <div class="profile-meta"><span>Ravi Kumar</span><small>Park Admin</small></div>
+              <i class="fas fa-chevron-down" style="font-size:0.7rem;color:var(--text-second);"></i>
+            </div>
+            <div class="dropdown profile-dropdown" id="profileDropdown">
+              <a><i class="fas fa-user"></i> My Profile</a>
+              <a><i class="fas fa-gear"></i> Account Settings</a>
+              <a class="danger"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="two-col">
+
+      <div class="content">
+
+
+        <section class="page-section active" id="overview">
+          <div class="welcome-banner">
+            <div>
+              <h2>Welcome back, <span>Ravi</span> 👋</h2>
+              <p>Here's what's happening across EcoZip Adventures today, June 30, 2026.</p>
+            </div>
+            <a class="btn-primary"><i class="fas fa-plus"></i> New Booking</a>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon green"><i class="fas fa-ticket"></i></div><span
+                  class="metric-change up">+12.4%</span>
+              </div>
+              <h3>248</h3>
+              <p>Bookings This Week</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon gold"><i class="fas fa-indian-rupee-sign"></i></div><span
+                  class="metric-change up">+8.1%</span>
+              </div>
+              <h3>₹4.82L</h3>
+              <p>Revenue This Month</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon blue"><i class="fas fa-user-group"></i></div><span
+                  class="metric-change up">+5.6%</span>
+              </div>
+              <h3>1,940</h3>
+              <p>Active Customers</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon red"><i class="fas fa-star-half-stroke"></i></div><span
+                  class="metric-change down">-0.2%</span>
+              </div>
+              <h3>4.7</h3>
+              <p>Average Park Rating</p>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Today's Bookings</h3><a class="link">View All</a>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Guest</th>
+                      <th>Course</th>
+                      <th>Slot</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Arjun Mehta</td>
+                      <td>Forest Canopy</td>
+                      <td>9:30 AM</td>
+                      <td><span class="status-pill confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sneha Iyer</td>
+                      <td>Twin Falls Glide</td>
+                      <td>11:00 AM</td>
+                      <td><span class="status-pill confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Group: Oakridge School</td>
+                      <td>Canyon Drop</td>
+                      <td>1:00 PM</td>
+                      <td><span class="status-pill pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>Vikram Das</td>
+                      <td>Forest Canopy</td>
+                      <td>3:30 PM</td>
+                      <td><span class="status-pill cancelled">Cancelled</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Recent Activity</h3>
+              </div>
+              <div class="activity-item">
+                <div class="act-dot"><i class="fas fa-ticket"></i></div>
+                <div>
+                  <p>New booking confirmed for Twin Falls Glide.</p><small>10 min ago</small>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="act-dot"><i class="fas fa-user-plus"></i></div>
+                <div>
+                  <p>New customer account created — Meera S.</p><small>42 min ago</small>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="act-dot"><i class="fas fa-star"></i></div>
+                <div>
+                  <p>5-star review submitted for Canyon Drop.</p><small>2 hours ago</small>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="act-dot"><i class="fas fa-tools"></i></div>
+                <div>
+                  <p>Gear inspection logged for Zone B harnesses.</p><small>5 hours ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="page-section" id="bookings">
+          <div class="page-head">
+            <h1>Bookings</h1>
+            <p>Manage and track every reservation across all zipline courses.</p>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon green"><i class="fas fa-check"></i></div>
+              </div>
+              <h3>186</h3>
+              <p>Confirmed Today</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon gold"><i class="fas fa-clock"></i></div>
+              </div>
+              <h3>14</h3>
+              <p>Pending Approval</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon red"><i class="fas fa-xmark"></i></div>
+              </div>
+              <h3>6</h3>
+              <p>Cancelled</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon blue"><i class="fas fa-people-group"></i></div>
+              </div>
+              <h3>32</h3>
+              <p>Group Bookings</p>
+            </div>
+          </div>
+
           <div class="panel">
-            <div class="panel-head"><h3>Today's Bookings</h3><a class="link">View All</a></div>
+            <div class="panel-head">
+              <h3>All Reservations</h3><a class="link">Export CSV</a>
+            </div>
             <div class="table-wrap">
               <table>
-                <thead><tr><th>Guest</th><th>Course</th><th>Slot</th><th>Status</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Guest</th>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Slot</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td>Arjun Mehta</td><td>Forest Canopy</td><td>9:30 AM</td><td><span class="status-pill confirmed">Confirmed</span></td></tr>
-                  <tr><td>Sneha Iyer</td><td>Twin Falls Glide</td><td>11:00 AM</td><td><span class="status-pill confirmed">Confirmed</span></td></tr>
-                  <tr><td>Group: Oakridge School</td><td>Canyon Drop</td><td>1:00 PM</td><td><span class="status-pill pending">Pending</span></td></tr>
-                  <tr><td>Vikram Das</td><td>Forest Canopy</td><td>3:30 PM</td><td><span class="status-pill cancelled">Cancelled</span></td></tr>
+                  <tr>
+                    <td>#EZ1042</td>
+                    <td>Arjun Mehta</td>
+                    <td>Forest Canopy</td>
+                    <td>Jun 30</td>
+                    <td>9:30 AM</td>
+                    <td>₹1,800</td>
+                    <td><span class="status-pill confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td>#EZ1043</td>
+                    <td>Sneha Iyer</td>
+                    <td>Twin Falls Glide</td>
+                    <td>Jun 30</td>
+                    <td>11:00 AM</td>
+                    <td>₹2,200</td>
+                    <td><span class="status-pill confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td>#EZ1044</td>
+                    <td>Oakridge School (24)</td>
+                    <td>Canyon Drop</td>
+                    <td>Jun 30</td>
+                    <td>1:00 PM</td>
+                    <td>₹28,800</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>#EZ1045</td>
+                    <td>Vikram Das</td>
+                    <td>Forest Canopy</td>
+                    <td>Jun 30</td>
+                    <td>3:30 PM</td>
+                    <td>₹1,800</td>
+                    <td><span class="status-pill cancelled">Cancelled</span></td>
+                  </tr>
+                  <tr>
+                    <td>#EZ1046</td>
+                    <td>Priya Raghavan</td>
+                    <td>Twin Falls Glide</td>
+                    <td>Jul 1</td>
+                    <td>10:00 AM</td>
+                    <td>₹2,200</td>
+                    <td><span class="status-pill confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td>#EZ1047</td>
+                    <td>Karthik Subramanian</td>
+                    <td>Canyon Drop</td>
+                    <td>Jul 1</td>
+                    <td>2:30 PM</td>
+                    <td>₹2,600</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
           </div>
+        </section>
+
+
+        <section class="page-section" id="routes">
+          <div class="page-head">
+            <h1>Routes &amp; Courses</h1>
+            <p>Monitor capacity, safety status, and booking load for each zipline course.</p>
+          </div>
+
+          <div class="route-grid">
+            <div class="route-card">
+              <img src="../Images/blog5.jpg" alt="Forest Canopy Zipline">
+              <div class="route-card-body">
+                <h4>Forest Canopy Zipline</h4>
+                <div class="route-meta"><span>620m · 4 lines</span><span>82% booked</span></div>
+                <div class="route-bar"><span style="width:82%;"></span></div>
+              </div>
+            </div>
+            <div class="route-card">
+              <img src="../Images/trek1.jpg" alt="Twin Falls Glide">
+              <div class="route-card-body">
+                <h4>Twin Falls Glide</h4>
+                <div class="route-meta"><span>480m · 3 lines</span><span>64% booked</span></div>
+                <div class="route-bar"><span style="width:64%;"></span></div>
+              </div>
+            </div>
+            <div class="route-card">
+              <img src="../Images/dh2.avif" alt="Canyon Drop Course">
+              <div class="route-card-body">
+                <h4>Canyon Drop Course</h4>
+                <div class="route-meta"><span>910m · 6 lines</span><span>95% booked</span></div>
+                <div class="route-bar"><span style="width:95%;"></span></div>
+              </div>
+            </div>
+          </div>
 
           <div class="panel">
-            <div class="panel-head"><h3>Recent Activity</h3></div>
-            <div class="activity-item"><div class="act-dot"><i class="fas fa-ticket"></i></div><div><p>New booking confirmed for Twin Falls Glide.</p><small>10 min ago</small></div></div>
-            <div class="activity-item"><div class="act-dot"><i class="fas fa-user-plus"></i></div><div><p>New customer account created — Meera S.</p><small>42 min ago</small></div></div>
-            <div class="activity-item"><div class="act-dot"><i class="fas fa-star"></i></div><div><p>5-star review submitted for Canyon Drop.</p><small>2 hours ago</small></div></div>
-            <div class="activity-item"><div class="act-dot"><i class="fas fa-tools"></i></div><div><p>Gear inspection logged for Zone B harnesses.</p><small>5 hours ago</small></div></div>
-          </div>
-        </div>
-      </section>
-
-      
-      <section class="page-section" id="bookings">
-        <div class="page-head"><h1>Bookings</h1><p>Manage and track every reservation across all zipline courses.</p></div>
-
-        <div class="metric-grid">
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon green"><i class="fas fa-check"></i></div></div><h3>186</h3><p>Confirmed Today</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon gold"><i class="fas fa-clock"></i></div></div><h3>14</h3><p>Pending Approval</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon red"><i class="fas fa-xmark"></i></div></div><h3>6</h3><p>Cancelled</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon blue"><i class="fas fa-people-group"></i></div></div><h3>32</h3><p>Group Bookings</p></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head"><h3>All Reservations</h3><a class="link">Export CSV</a></div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Booking ID</th><th>Guest</th><th>Course</th><th>Date</th><th>Slot</th><th>Amount</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td>#EZ1042</td><td>Arjun Mehta</td><td>Forest Canopy</td><td>Jun 30</td><td>9:30 AM</td><td>₹1,800</td><td><span class="status-pill confirmed">Confirmed</span></td></tr>
-                <tr><td>#EZ1043</td><td>Sneha Iyer</td><td>Twin Falls Glide</td><td>Jun 30</td><td>11:00 AM</td><td>₹2,200</td><td><span class="status-pill confirmed">Confirmed</span></td></tr>
-                <tr><td>#EZ1044</td><td>Oakridge School (24)</td><td>Canyon Drop</td><td>Jun 30</td><td>1:00 PM</td><td>₹28,800</td><td><span class="status-pill pending">Pending</span></td></tr>
-                <tr><td>#EZ1045</td><td>Vikram Das</td><td>Forest Canopy</td><td>Jun 30</td><td>3:30 PM</td><td>₹1,800</td><td><span class="status-pill cancelled">Cancelled</span></td></tr>
-                <tr><td>#EZ1046</td><td>Priya Raghavan</td><td>Twin Falls Glide</td><td>Jul 1</td><td>10:00 AM</td><td>₹2,200</td><td><span class="status-pill confirmed">Confirmed</span></td></tr>
-                <tr><td>#EZ1047</td><td>Karthik Subramanian</td><td>Canyon Drop</td><td>Jul 1</td><td>2:30 PM</td><td>₹2,600</td><td><span class="status-pill pending">Pending</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      
-      <section class="page-section" id="routes">
-        <div class="page-head"><h1>Routes &amp; Courses</h1><p>Monitor capacity, safety status, and booking load for each zipline course.</p></div>
-
-        <div class="route-grid">
-          <div class="route-card">
-            <img src="../Images/blog5.jpg" alt="Forest Canopy Zipline">
-            <div class="route-card-body">
-              <h4>Forest Canopy Zipline</h4>
-              <div class="route-meta"><span>620m · 4 lines</span><span>82% booked</span></div>
-              <div class="route-bar"><span style="width:82%;"></span></div>
+            <div class="panel-head">
+              <h3>Safety Inspection Log</h3><a class="link">Schedule Check</a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Last Checked</th>
+                    <th>Inspector</th>
+                    <th>Next Due</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Forest Canopy</td>
+                    <td>Jun 25, 2026</td>
+                    <td>S. Naidu</td>
+                    <td>Jul 2, 2026</td>
+                    <td><span class="status-pill confirmed">Cleared</span></td>
+                  </tr>
+                  <tr>
+                    <td>Twin Falls Glide</td>
+                    <td>Jun 27, 2026</td>
+                    <td>M. Reddy</td>
+                    <td>Jul 4, 2026</td>
+                    <td><span class="status-pill confirmed">Cleared</span></td>
+                  </tr>
+                  <tr>
+                    <td>Canyon Drop</td>
+                    <td>Jun 20, 2026</td>
+                    <td>S. Naidu</td>
+                    <td>Jul 1, 2026</td>
+                    <td><span class="status-pill pending">Due Soon</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="route-card">
-            <img src="../Images/trek1.jpg" alt="Twin Falls Glide">
-            <div class="route-card-body">
-              <h4>Twin Falls Glide</h4>
-              <div class="route-meta"><span>480m · 3 lines</span><span>64% booked</span></div>
-              <div class="route-bar"><span style="width:64%;"></span></div>
+        </section>
+
+
+        <section class="page-section" id="staff">
+          <div class="page-head">
+            <h1>Staff Schedule</h1>
+            <p>Track today's trail guides, gear technicians, and basecamp crew.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>On Duty Today</h3><a class="link">+ Add Shift</a>
+            </div>
+            <div class="staff-row">
+              <div class="staff-avatar">SN</div>
+              <div class="meta">
+                <h4>Suresh Naidu</h4><small>Trail Guide · Forest Canopy</small>
+              </div>
+              <span class="shift-pill">8 AM – 4 PM</span>
+            </div>
+            <div class="staff-row">
+              <div class="staff-avatar">MR</div>
+              <div class="meta">
+                <h4>Meena Reddy</h4><small>Trail Guide · Twin Falls</small>
+              </div>
+              <span class="shift-pill">9 AM – 5 PM</span>
+            </div>
+            <div class="staff-row">
+              <div class="staff-avatar">AK</div>
+              <div class="meta">
+                <h4>Anil Kumar</h4><small>Gear Technician</small>
+              </div>
+              <span class="shift-pill">7 AM – 3 PM</span>
+            </div>
+            <div class="staff-row">
+              <div class="staff-avatar">DJ</div>
+              <div class="meta">
+                <h4>Divya Joseph</h4><small>Basecamp Check-In</small>
+              </div>
+              <span class="shift-pill">8:30 AM – 6 PM</span>
+            </div>
+            <div class="staff-row">
+              <div class="staff-avatar">RT</div>
+              <div class="meta">
+                <h4>Ramesh Thomas</h4><small>Trail Guide · Canyon Drop</small>
+              </div>
+              <span class="shift-pill">10 AM – 6 PM</span>
             </div>
           </div>
-          <div class="route-card">
-            <img src="../Images/dh2.avif" alt="Canyon Drop Course">
-            <div class="route-card-body">
-              <h4>Canyon Drop Course</h4>
-              <div class="route-meta"><span>910m · 6 lines</span><span>95% booked</span></div>
-              <div class="route-bar"><span style="width:95%;"></span></div>
+        </section>
+
+
+        <section class="page-section" id="customers">
+          <div class="page-head">
+            <h1>Customers</h1>
+            <p>View guest profiles, visit history, and loyalty status.</p>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon green"><i class="fas fa-user-plus"></i></div>
+              </div>
+              <h3>86</h3>
+              <p>New This Month</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon gold"><i class="fas fa-repeat"></i></div>
+              </div>
+              <h3>412</h3>
+              <p>Repeat Visitors</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon blue"><i class="fas fa-people-roof"></i></div>
+              </div>
+              <h3>57</h3>
+              <p>Group Accounts</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon red"><i class="fas fa-medal"></i></div>
+              </div>
+              <h3>128</h3>
+              <p>Loyalty Members</p>
             </div>
           </div>
-        </div>
 
-        <div class="panel">
-          <div class="panel-head"><h3>Safety Inspection Log</h3><a class="link">Schedule Check</a></div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Course</th><th>Last Checked</th><th>Inspector</th><th>Next Due</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td>Forest Canopy</td><td>Jun 25, 2026</td><td>S. Naidu</td><td>Jul 2, 2026</td><td><span class="status-pill confirmed">Cleared</span></td></tr>
-                <tr><td>Twin Falls Glide</td><td>Jun 27, 2026</td><td>M. Reddy</td><td>Jul 4, 2026</td><td><span class="status-pill confirmed">Cleared</span></td></tr>
-                <tr><td>Canyon Drop</td><td>Jun 20, 2026</td><td>S. Naidu</td><td>Jul 1, 2026</td><td><span class="status-pill pending">Due Soon</span></td></tr>
-              </tbody>
-            </table>
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Recent Customers</h3><a class="link">View All</a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Visits</th>
+                    <th>Last Visit</th>
+                    <th>Tier</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Arjun Mehta</td>
+                    <td>arjun.m@mail.com</td>
+                    <td>5</td>
+                    <td>Jun 30, 2026</td>
+                    <td><span class="status-pill confirmed">Gold</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sneha Iyer</td>
+                    <td>sneha.i@mail.com</td>
+                    <td>2</td>
+                    <td>Jun 30, 2026</td>
+                    <td><span class="status-pill pending">Silver</span></td>
+                  </tr>
+                  <tr>
+                    <td>Priya Raghavan</td>
+                    <td>priya.r@mail.com</td>
+                    <td>9</td>
+                    <td>Jun 28, 2026</td>
+                    <td><span class="status-pill confirmed">Gold</span></td>
+                  </tr>
+                  <tr>
+                    <td>Karthik S.</td>
+                    <td>karthik.s@mail.com</td>
+                    <td>1</td>
+                    <td>Jun 24, 2026</td>
+                    <td><span class="status-pill pending">Bronze</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      
-      <section class="page-section" id="staff">
-        <div class="page-head"><h1>Staff Schedule</h1><p>Track today's trail guides, gear technicians, and basecamp crew.</p></div>
 
-        <div class="panel">
-          <div class="panel-head"><h3>On Duty Today</h3><a class="link">+ Add Shift</a></div>
-          <div class="staff-row">
-            <div class="staff-avatar">SN</div>
-            <div class="meta"><h4>Suresh Naidu</h4><small>Trail Guide · Forest Canopy</small></div>
-            <span class="shift-pill">8 AM – 4 PM</span>
+        <section class="page-section" id="revenue">
+          <div class="page-head">
+            <h1>Revenue Reports</h1>
+            <p>Track income across courses, packages, and seasons.</p>
           </div>
-          <div class="staff-row">
-            <div class="staff-avatar">MR</div>
-            <div class="meta"><h4>Meena Reddy</h4><small>Trail Guide · Twin Falls</small></div>
-            <span class="shift-pill">9 AM – 5 PM</span>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon green"><i class="fas fa-indian-rupee-sign"></i></div><span
+                  class="metric-change up">+8.1%</span>
+              </div>
+              <h3>₹4.82L</h3>
+              <p>This Month</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon gold"><i class="fas fa-calendar"></i></div><span
+                  class="metric-change up">+3.4%</span>
+              </div>
+              <h3>₹52.6L</h3>
+              <p>Year to Date</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon blue"><i class="fas fa-ticket"></i></div>
+              </div>
+              <h3>₹1,940</h3>
+              <p>Avg. Booking Value</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon red"><i class="fas fa-rotate-left"></i></div><span
+                  class="metric-change down">-1.1%</span>
+              </div>
+              <h3>₹12,400</h3>
+              <p>Refunds This Month</p>
+            </div>
           </div>
-          <div class="staff-row">
-            <div class="staff-avatar">AK</div>
-            <div class="meta"><h4>Anil Kumar</h4><small>Gear Technician</small></div>
-            <span class="shift-pill">7 AM – 3 PM</span>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Revenue by Course</h3>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Bookings</th>
+                    <th>Revenue</th>
+                    <th>Share</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Canyon Drop</td>
+                    <td>312</td>
+                    <td>₹2.10L</td>
+                    <td>44%</td>
+                  </tr>
+                  <tr>
+                    <td>Forest Canopy</td>
+                    <td>266</td>
+                    <td>₹1.56L</td>
+                    <td>32%</td>
+                  </tr>
+                  <tr>
+                    <td>Twin Falls Glide</td>
+                    <td>198</td>
+                    <td>₹1.16L</td>
+                    <td>24%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="staff-row">
-            <div class="staff-avatar">DJ</div>
-            <div class="meta"><h4>Divya Joseph</h4><small>Basecamp Check-In</small></div>
-            <span class="shift-pill">8:30 AM – 6 PM</span>
+        </section>
+
+
+        <section class="page-section" id="reviews">
+          <div class="page-head">
+            <h1>Reviews</h1>
+            <p>Guest feedback across all courses and basecamp experiences.</p>
           </div>
-          <div class="staff-row">
-            <div class="staff-avatar">RT</div>
-            <div class="meta"><h4>Ramesh Thomas</h4><small>Trail Guide · Canyon Drop</small></div>
-            <span class="shift-pill">10 AM – 6 PM</span>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon gold"><i class="fas fa-star"></i></div>
+              </div>
+              <h3>4.7</h3>
+              <p>Overall Rating</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon green"><i class="fas fa-comments"></i></div>
+              </div>
+              <h3>312</h3>
+              <p>Total Reviews</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon blue"><i class="fas fa-reply"></i></div>
+              </div>
+              <h3>289</h3>
+              <p>Responded To</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-top">
+                <div class="metric-icon red"><i class="fas fa-flag"></i></div>
+              </div>
+              <h3>3</h3>
+              <p>Flagged for Review</p>
+            </div>
           </div>
-        </div>
-      </section>
 
-      
-      <section class="page-section" id="customers">
-        <div class="page-head"><h1>Customers</h1><p>View guest profiles, visit history, and loyalty status.</p></div>
-
-        <div class="metric-grid">
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon green"><i class="fas fa-user-plus"></i></div></div><h3>86</h3><p>New This Month</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon gold"><i class="fas fa-repeat"></i></div></div><h3>412</h3><p>Repeat Visitors</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon blue"><i class="fas fa-people-roof"></i></div></div><h3>57</h3><p>Group Accounts</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon red"><i class="fas fa-medal"></i></div></div><h3>128</h3><p>Loyalty Members</p></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head"><h3>Recent Customers</h3><a class="link">View All</a></div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Name</th><th>Email</th><th>Visits</th><th>Last Visit</th><th>Tier</th></tr></thead>
-              <tbody>
-                <tr><td>Arjun Mehta</td><td>arjun.m@mail.com</td><td>5</td><td>Jun 30, 2026</td><td><span class="status-pill confirmed">Gold</span></td></tr>
-                <tr><td>Sneha Iyer</td><td>sneha.i@mail.com</td><td>2</td><td>Jun 30, 2026</td><td><span class="status-pill pending">Silver</span></td></tr>
-                <tr><td>Priya Raghavan</td><td>priya.r@mail.com</td><td>9</td><td>Jun 28, 2026</td><td><span class="status-pill confirmed">Gold</span></td></tr>
-                <tr><td>Karthik S.</td><td>karthik.s@mail.com</td><td>1</td><td>Jun 24, 2026</td><td><span class="status-pill pending">Bronze</span></td></tr>
-              </tbody>
-            </table>
+          <div class="review-card">
+            <div class="review-top"><strong>Priya Raghavan</strong><span class="stars">★★★★★</span></div>
+            <p>The Twin Falls course was unforgettable — guides were professional and safety briefing was thorough.</p>
+            <small>Twin Falls Glide · Jun 28, 2026</small>
           </div>
-        </div>
-      </section>
-
-      
-      <section class="page-section" id="revenue">
-        <div class="page-head"><h1>Revenue Reports</h1><p>Track income across courses, packages, and seasons.</p></div>
-
-        <div class="metric-grid">
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon green"><i class="fas fa-indian-rupee-sign"></i></div><span class="metric-change up">+8.1%</span></div><h3>₹4.82L</h3><p>This Month</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon gold"><i class="fas fa-calendar"></i></div><span class="metric-change up">+3.4%</span></div><h3>₹52.6L</h3><p>Year to Date</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon blue"><i class="fas fa-ticket"></i></div></div><h3>₹1,940</h3><p>Avg. Booking Value</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon red"><i class="fas fa-rotate-left"></i></div><span class="metric-change down">-1.1%</span></div><h3>₹12,400</h3><p>Refunds This Month</p></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head"><h3>Revenue by Course</h3></div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Course</th><th>Bookings</th><th>Revenue</th><th>Share</th></tr></thead>
-              <tbody>
-                <tr><td>Canyon Drop</td><td>312</td><td>₹2.10L</td><td>44%</td></tr>
-                <tr><td>Forest Canopy</td><td>266</td><td>₹1.56L</td><td>32%</td></tr>
-                <tr><td>Twin Falls Glide</td><td>198</td><td>₹1.16L</td><td>24%</td></tr>
-              </tbody>
-            </table>
+          <div class="review-card">
+            <div class="review-top"><strong>Karthik S.</strong><span class="stars">★★★★☆</span></div>
+            <p>Great experience overall, though the wait time at check-in could be shorter on weekends.</p>
+            <small>Canyon Drop · Jun 24, 2026</small>
           </div>
-        </div>
-      </section>
-
-      
-      <section class="page-section" id="reviews">
-        <div class="page-head"><h1>Reviews</h1><p>Guest feedback across all courses and basecamp experiences.</p></div>
-
-        <div class="metric-grid">
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon gold"><i class="fas fa-star"></i></div></div><h3>4.7</h3><p>Overall Rating</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon green"><i class="fas fa-comments"></i></div></div><h3>312</h3><p>Total Reviews</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon blue"><i class="fas fa-reply"></i></div></div><h3>289</h3><p>Responded To</p></div>
-          <div class="metric-card"><div class="metric-top"><div class="metric-icon red"><i class="fas fa-flag"></i></div></div><h3>3</h3><p>Flagged for Review</p></div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-top"><strong>Priya Raghavan</strong><span class="stars">★★★★★</span></div>
-          <p>The Twin Falls course was unforgettable — guides were professional and safety briefing was thorough.</p>
-          <small>Twin Falls Glide · Jun 28, 2026</small>
-        </div>
-        <div class="review-card">
-          <div class="review-top"><strong>Karthik S.</strong><span class="stars">★★★★☆</span></div>
-          <p>Great experience overall, though the wait time at check-in could be shorter on weekends.</p>
-          <small>Canyon Drop · Jun 24, 2026</small>
-        </div>
-        <div class="review-card">
-          <div class="review-top"><strong>Meera S.</strong><span class="stars">★★★★★</span></div>
-          <p>Forest Canopy was perfect for our family — kids loved it and the staff made us feel safe throughout.</p>
-          <small>Forest Canopy · Jun 22, 2026</small>
-        </div>
-      </section>
-
-      
-      <section class="page-section" id="settings">
-        <div class="page-head"><h1>Settings</h1><p>Manage your admin profile, park preferences, and notifications.</p></div>
-
-        <div class="panel">
-          <div class="panel-head"><h3>Profile Information</h3></div>
-          <div class="settings-grid">
-            <div class="settings-field"><label>Full Name</label><input type="text" value="Ravi Kumar"></div>
-            <div class="settings-field"><label>Email Address</label><input type="email" value="ravi.kumar@ecozip.com"></div>
-            <div class="settings-field"><label>Role</label><input type="text" value="Park Admin" disabled></div>
-            <div class="settings-field"><label>Phone Number</label><input type="tel" value="+91 90000 00000"></div>
+          <div class="review-card">
+            <div class="review-top"><strong>Meera S.</strong><span class="stars">★★★★★</span></div>
+            <p>Forest Canopy was perfect for our family — kids loved it and the staff made us feel safe throughout.</p>
+            <small>Forest Canopy · Jun 22, 2026</small>
           </div>
-          <button class="btn-primary" style="border-radius:8px;">Save Changes</button>
-        </div>
+        </section>
 
-        <div class="panel">
-          <div class="panel-head"><h3>Notification Preferences</h3></div>
-          <div class="toggle-row">
-            <p>New Bookings<small>Get notified when a guest books a slot</small></p>
-            <label class="switch"><input type="checkbox" checked><span class="slider-tg"></span></label>
-          </div>
-          <div class="toggle-row">
-            <p>Safety Alerts<small>Reminders for inspection and maintenance</small></p>
-            <label class="switch"><input type="checkbox" checked><span class="slider-tg"></span></label>
-          </div>
-          <div class="toggle-row">
-            <p>Review Notifications<small>Get notified for new guest reviews</small></p>
-            <label class="switch"><input type="checkbox"><span class="slider-tg"></span></label>
-          </div>
-        </div>
-      </section>
 
+        <section class="page-section" id="settings">
+          <div class="page-head">
+            <h1>Settings</h1>
+            <p>Manage your admin profile, park preferences, and notifications.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Profile Information</h3>
+            </div>
+            <div class="settings-grid">
+              <div class="settings-field"><label>Full Name</label><input type="text" value="Ravi Kumar"></div>
+              <div class="settings-field"><label>Email Address</label><input type="email" value="ravi.kumar@ecozip.com">
+              </div>
+              <div class="settings-field"><label>Role</label><input type="text" value="Park Admin" disabled></div>
+              <div class="settings-field"><label>Phone Number</label><input type="tel" value="+91 90000 00000"></div>
+            </div>
+            <button class="btn-primary" style="border-radius:8px;">Save Changes</button>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Notification Preferences</h3>
+            </div>
+            <div class="toggle-row">
+              <p>New Bookings<small>Get notified when a guest books a slot</small></p>
+              <label class="switch"><input type="checkbox" checked><span class="slider-tg"></span></label>
+            </div>
+            <div class="toggle-row">
+              <p>Safety Alerts<small>Reminders for inspection and maintenance</small></p>
+              <label class="switch"><input type="checkbox" checked><span class="slider-tg"></span></label>
+            </div>
+            <div class="toggle-row">
+              <p>Review Notifications<small>Get notified for new guest reviews</small></p>
+              <label class="switch"><input type="checkbox"><span class="slider-tg"></span></label>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-function logout() {
-  localStorage.removeItem("isLoggedIn");
-  sessionStorage.clear();
+  <script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      sessionStorage.clear();
 
-  window.location.href = "index.html";
-}
-</script>
-<script>
-
-
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-}
-
-if (localStorage.getItem('direction') === 'rtl') {
-  document.documentElement.setAttribute('dir', 'rtl');
-} else {
-  document.documentElement.setAttribute('dir', 'ltr');
-}
-
-const navLinks = document.querySelectorAll('.nav-link[data-target]');
-const sections = document.querySelectorAll('.page-section');
-
-navLinks.forEach(link => {
-
-  link.addEventListener('click', () => {
-
-    navLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-
-    sections.forEach(section =>
-      section.classList.remove('active')
-    );
-
-    document
-      .getElementById(link.dataset.target)
-      .classList.add('active');
-
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
-
-  });
-
-});
+      window.location.href = "index.html";
+    }
+  </script>
+  <script>
 
 
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
 
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
-const menuToggle = document.getElementById('menuToggle');
+    if (localStorage.getItem('direction') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
 
-menuToggle.addEventListener('click', () => {
+    const navLinks = document.querySelectorAll('.nav-link[data-target]');
+    const sections = document.querySelectorAll('.page-section');
 
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('open');
+    navLinks.forEach(link => {
 
-});
+      link.addEventListener('click', () => {
 
-overlay.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
 
-  sidebar.classList.remove('open');
-  overlay.classList.remove('open');
+        sections.forEach(section =>
+          section.classList.remove('active')
+        );
 
-});
+        document
+          .getElementById(link.dataset.target)
+          .classList.add('active');
 
+        sidebar.classList.remove('open');
+        overlay.classList.remove('open');
 
+      });
 
-const darkToggle = document.getElementById('darkToggle');
-
-darkToggle.addEventListener('click', () => {
-
-  document.body.classList.toggle('dark');
-
-  if (document.body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
-
-});
-
-
-
-function toggleDropdown(btnId, dropId, others) {
-
-  const btn = document.getElementById(btnId);
-  const drop = document.getElementById(dropId);
-
-  btn.addEventListener('click', (e) => {
-
-    e.stopPropagation();
-
-    others.forEach(id => {
-      document.getElementById(id).classList.remove('open');
     });
 
-    drop.classList.toggle('open');
 
-  });
 
-}
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const menuToggle = document.getElementById('menuToggle');
 
-toggleDropdown(
-  'notifBtn',
-  'notifDropdown',
-  ['profileDropdown']
-);
+    menuToggle.addEventListener('click', () => {
 
-toggleDropdown(
-  'profileBtn',
-  'profileDropdown',
-  ['notifDropdown']
-);
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
 
-document.addEventListener('click', () => {
+    });
 
-  document
-    .getElementById('notifDropdown')
-    .classList.remove('open');
+    overlay.addEventListener('click', () => {
 
-  document
-    .getElementById('profileDropdown')
-    .classList.remove('open');
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
 
-});
+    });
 
-const rtlToggle = document.getElementById('rtlToggle');
 
-rtlToggle.addEventListener('click', () => {
 
-  const isRTL =
-    document.documentElement.getAttribute('dir') === 'rtl';
+    const darkToggle = document.getElementById('darkToggle');
 
-  if (isRTL) {
+    darkToggle.addEventListener('click', () => {
 
-    document.documentElement.setAttribute('dir', 'ltr');
-    localStorage.setItem('direction', 'ltr');
+      document.body.classList.toggle('dark');
 
-  } else {
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
 
-    document.documentElement.setAttribute('dir', 'rtl');
-    localStorage.setItem('direction', 'rtl');
+    });
 
-  }
 
-});
 
-</script>
+    function toggleDropdown(btnId, dropId, others) {
 
-    
-<script src="../js/components.js"></script>
+      const btn = document.getElementById(btnId);
+      const drop = document.getElementById(dropId);
+
+      btn.addEventListener('click', (e) => {
+
+        e.stopPropagation();
+
+        others.forEach(id => {
+          document.getElementById(id).classList.remove('open');
+        });
+
+        drop.classList.toggle('open');
+
+      });
+
+    }
+
+    toggleDropdown(
+      'notifBtn',
+      'notifDropdown',
+      ['profileDropdown']
+    );
+
+    toggleDropdown(
+      'profileBtn',
+      'profileDropdown',
+      ['notifDropdown']
+    );
+
+    document.addEventListener('click', () => {
+
+      document
+        .getElementById('notifDropdown')
+        .classList.remove('open');
+
+      document
+        .getElementById('profileDropdown')
+        .classList.remove('open');
+
+    });
+
+    const rtlToggle = document.getElementById('rtlToggle');
+
+    rtlToggle.addEventListener('click', () => {
+
+      const isRTL =
+        document.documentElement.getAttribute('dir') === 'rtl';
+
+      if (isRTL) {
+
+        document.documentElement.setAttribute('dir', 'ltr');
+        localStorage.setItem('direction', 'ltr');
+
+      } else {
+
+        document.documentElement.setAttribute('dir', 'rtl');
+        localStorage.setItem('direction', 'rtl');
+
+      }
+
+    });
+
+  </script>
+
+
+  <script src="../js/components.js"></script>
 
 </body>
+
 </html>

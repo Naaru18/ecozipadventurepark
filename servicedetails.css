@@ -5,6 +5,7 @@
   text-align: center;
   background: url("Images/servicedetailsbg.jpg") center/cover no-repeat;
 }
+
 .service-details-overlay {
   position: absolute;
   inset: 0;
@@ -46,6 +47,52 @@
   flex-wrap: wrap;
 }
 
+.service-details-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.service-details-buttons .btn-primary,
+.service-details-buttons .btn-outline-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 11px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.service-details-buttons .btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
+}
+
+.service-details-buttons .btn-primary:hover {
+
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+
+.service-details-buttons .btn-outline-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--primary);
+}
+
+.service-details-buttons .btn-outline-secondary:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 @media (max-width: 360px) {
   .service-details-hero {
     min-height: 60vh;
@@ -78,7 +125,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    
+
     width: 80%;
   }
 }
@@ -620,7 +667,7 @@
 }
 
 
-/* ===================== 1280px ===================== */
+
 @media (max-width:1280px) {
   .detail-layout {
     grid-template-columns: minmax(0, 1fr) 300px;
@@ -633,7 +680,7 @@
 }
 
 
-/* ===================== 1024px ===================== */
+
 @media (max-width:1024px) {
   .detail-content {
     padding: 52px 0;
@@ -670,7 +717,7 @@
 }
 
 
-/* ===================== 768px ===================== */
+
 @media (max-width:768px) {
   .detail-content {
     padding: 40px 0;
@@ -727,7 +774,7 @@
 }
 
 
-/* ===================== 360px ===================== */
+
 @media (max-width:360px) {
   .container {
     padding: 0 12px;
@@ -1103,6 +1150,7 @@
   align-items: center;
   text-align: center;
 }
+
 .pricing-feat {
   font-size: 0.82rem;
   color: var(--text-second, var(--color-text-secondary));

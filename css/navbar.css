@@ -42,7 +42,10 @@ body {
   flex-shrink: 0;
 }
 
-.ez-logo-icon {
+
+.ez-logo-icon img {
+
+  object-fit: contain;
   width: 44px;
   height: 44px;
   border-radius: 10px;
@@ -55,8 +58,8 @@ body {
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-}
 
+}
 
 
 .ez-logo-text {

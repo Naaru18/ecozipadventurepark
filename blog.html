@@ -1,301 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecozip Adventure - Blog</title>
 
-    <link rel="stylesheet" href="../blog.css">
-   <link rel="stylesheet" href="../global.css">
-  
-      <link rel="icon" type="image/png" href="../Images/icon.png">
-   
-    <link rel="preload" href="../css/navbar.css" as="style">
-  
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecozip Adventure - Blog</title>
+
+  <link rel="stylesheet" href="../blog.css">
+  <link rel="stylesheet" href="../global.css">
+
+  <link rel="icon" type="image/png" href="../Images/icon.png">
+
+  <link rel="preload" href="../css/navbar.css" as="style">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
 </head>
+
 <body>
-    <div id="navbar"></div>
+  <div id="navbar"></div>
 
-<section class="blog-hero">
-  <div class="blog-hero-bg"></div>
-  <div class="blog-hero-overlay"></div>
+  <section class="blog-hero">
+    <div class="blog-hero-bg"></div>
+    <div class="blog-hero-overlay"></div>
 
-  <div class="container">
-    <div class="blog-hero-content">
+    <div class="container">
+      <div class="blog-hero-content">
 
-      <div class="eyebrow">
-        Blog & Stories
+        <div class="eyebrow">
+          Blog & Stories
+        </div>
+
+        <h1 class="section-title">
+          OUR <span>BLOG</span>
+        </h1>
+
+        <p class="section-sub">
+          Stories from the wild, travel guides, adventure tips, and real experiences from our zipline and adventure
+          park.
+        </p>
+
+        <div class="blog-actions">
+          <a href="#posts" class="btn-primary">Read Articles</a>
+          <a href="#categories" class="btn-outline">Browse Categories</a>
+        </div>
+
+
       </div>
-
-      <h1 class="section-title">
-        OUR <span>BLOG</span>
-      </h1>
-
-      <p class="section-sub">
-        Stories from the wild, travel guides, adventure tips, and real experiences from our zipline and adventure park.
-      </p>
-
-      <div class="blog-actions">
-        <a href="#posts" class="btn-primary">Read Articles</a>
-        <a href="#categories" class="btn-outline">Browse Categories</a>
-      </div>
-
-
     </div>
-  </div>
-</section>
-<script>
-  window.addEventListener("load", () => {
-  const content = document.querySelector(".blog-hero-content");
+  </section>
+  <script>
+    window.addEventListener("load", () => {
+      const content = document.querySelector(".blog-hero-content");
 
-  content.style.opacity = 0;
-  content.style.transform = "translateY(20px)";
+      content.style.opacity = 0;
+      content.style.transform = "translateY(20px)";
 
-  setTimeout(() => {
-    content.style.transition = "0.8s ease";
-    content.style.opacity = 1;
-    content.style.transform = "translateY(0)";
-  }, 120);
-});
-</script>
-<section class="blog-featured section">
-  
+      setTimeout(() => {
+        content.style.transition = "0.8s ease";
+        content.style.opacity = 1;
+        content.style.transform = "translateY(0)";
+      }, 120);
+    });
+  </script>
+  <section class="blog-featured section">
+
     <div class="eyebrow">Featured Story</div>
-  <div class="container">
-    <div class="blog-featured-wrap">
-      <div class="blog-featured-image">
-        <img src="../Images/blogs1.jfif" alt="Zipline launch platform at golden hour">
-        <div class="featured-badge">★ Editor's Pick</div>
-      </div>
-      <div class="blog-featured-content">
-        <div class="blog-meta">
-          <span>Safety</span>
-          <span>Jun 12, 2025</span>
-          <span>8 min read</span>
+    <div class="container">
+      <div class="blog-featured-wrap">
+        <div class="blog-featured-image">
+          <img src="../Images/blogs1.jfif" alt="Zipline launch platform at golden hour">
+          <div class="featured-badge">★ Editor's Pick</div>
         </div>
-        <h2 class="section-title left">What Happens in the <span>30 Seconds</span> Before You Launch</h2>
-      <p class="section-sub left">
-  Every rider thinks the hard part is the drop. It isn't. Our lead guide breaks down the pre-launch checklist — and why the ritual matters more than the ride itself.
-</p>
+        <div class="blog-featured-content">
+          <div class="blog-meta">
+            <span>Safety</span>
+            <span>Jun 12, 2025</span>
+            <span>8 min read</span>
+          </div>
+          <h2 class="section-title left">What Happens in the <span>30 Seconds</span> Before You Launch</h2>
+          <p class="section-sub left">
+            Every rider thinks the hard part is the drop. It isn't. Our lead guide breaks down the pre-launch checklist
+            — and why the ritual matters more than the ride itself.
+          </p>
 
-<p class="section-sub left">
-  From harness checks and safety commands to mental preparation and trust in your equipment, those final moments before takeoff build confidence, focus, and excitement.
-        <a href="../blogdetails.html" class="read-more-link">
-          Read the full story <span class="arrow">→</span>
-        </a>
+          <p class="section-sub left">
+            From harness checks and safety commands to mental preparation and trust in your equipment, those final
+            moments before takeoff build confidence, focus, and excitement.
+            <a href="../blogdetails.html" class="read-more-link">
+              Read the full story <span class="arrow">→</span>
+            </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="blog-grid-section section">
-  <div class="container">
-    <div class="blog-grid-header">
-      <div class="left-block">
-        <div class="eyebrow">Latest Posts</div>
-        <h2 class="section-title">Recent <span>Articles</span></h2>
-      </div>
-      <a href="../blogdetails.html" class="btn btn-outline">View all posts →</a>
-    </div>
-
-    <div class="blog-grid">
-
-      <div class="blog-card">
-        <div class="blog-card-image">
-          <img src="../Images/blog1.jfif" alt="Forest canopy from above">
-          <span class="read-time">5 min</span>
+  </section>
+  <section class="blog-grid-section section">
+    <div class="container">
+      <div class="blog-grid-header">
+        <div class="left-block">
+          <div class="eyebrow">Latest Posts</div>
+          <h2 class="section-title">Recent <span>Articles</span></h2>
         </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Gear</span>
-          <h3>The Harness That Changed How We Build Every Rig</h3>
-          <p>After testing 14 harness systems across three seasons, one design kept our guides coming back. Here's what makes it different.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author1.jfif" alt="Arjun Mehta">
-              <span class="author-name">Arjun Mehta</span>
+        <a href="../blogdetails.html" class="btn btn-outline">View all posts →</a>
+      </div>
+
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="../Images/blog1.jfif" alt="Forest canopy from above">
+            <span class="read-time">5 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Gear</span>
+            <h3>The Harness That Changed How We Build Every Rig</h3>
+            <p>After testing 14 harness systems across three seasons, one design kept our guides coming back. Here's
+              what makes it different.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author1.jfif" alt="Arjun Mehta">
+                <span class="author-name">Arjun Mehta</span>
+              </div>
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span>
+                </a></span>
             </div>
-            <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span>
-        </a></span>
           </div>
         </div>
-      </div>
 
-      <div class="blog-card">
-        <div class="blog-card-image">
-          <img src="../Images/blog2.jfif" alt="Mountain valley panorama">
-          <span class="read-time">6 min</span>
-        </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Destinations</span>
-          <h3>Why the Valley Crossing Is Our Most Photographed Line</h3>
-          <p>Wind, altitude, and 340 metres of open air. We asked a landscape photographer to ride Line 4 and tell us what she saw.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author2.jfif" alt="Priya Suresh">
-              <span class="author-name">Priya Suresh</span>
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="../Images/blog2.jfif" alt="Mountain valley panorama">
+            <span class="read-time">6 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Destinations</span>
+            <h3>Why the Valley Crossing Is Our Most Photographed Line</h3>
+            <p>Wind, altitude, and 340 metres of open air. We asked a landscape photographer to ride Line 4 and tell us
+              what she saw.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author2.jfif" alt="Priya Suresh">
+                <span class="author-name">Priya Suresh</span>
+              </div>
+
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span></a></span>
             </div>
-            
-            <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span></a></span>
           </div>
         </div>
-      </div>
 
-         <div class="blog-card">
-        <div class="blog-card-image">
-          
-          <img src="../Images/blog3.jfif" alt="Camping site at dusk">
-          <span class="read-time">4 min</span>
-        </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Training</span>
-          
-          <h3>How We Train Guides to Stay Calm When Riders Panic</h3>
-          <p>Fear is contagious. Calm is a skill. Our head trainer explains the three-breath protocol every guide learns before touching a carabiner.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author3.jfif" alt="Priya Suresh">
-              <span class="author-name">Kiran Das</span>
+        <div class="blog-card">
+          <div class="blog-card-image">
+
+            <img src="../Images/blog3.jfif" alt="Camping site at dusk">
+            <span class="read-time">4 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Training</span>
+
+            <h3>How We Train Guides to Stay Calm When Riders Panic</h3>
+            <p>Fear is contagious. Calm is a skill. Our head trainer explains the three-breath protocol every guide
+              learns before touching a carabiner.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author3.jfif" alt="Priya Suresh">
+                <span class="author-name">Kiran Das</span>
+              </div>
+
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span></a></span>
             </div>
-            
-            <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span></a></span>
           </div>
         </div>
-      </div>
 
 
-      <div class="blog-card">
-        <div class="blog-card-image">
-          <img src="../Images/blog4.jfif" alt="Suspended bridge through forest">
-          <span class="read-time">7 min</span>
-        </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Build</span>
-          <h3>Building Line 7: 18 Months, One Valley, Zero Compromises</h3>
-          <p>Our longest line took the better part of two years to certify. A walk through every obstacle — environmental, structural, and human.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author4.jfif" alt="Rahul Nair">
-              <span class="author-name">Rahul Nair</span>
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="../Images/blog4.jfif" alt="Suspended bridge through forest">
+            <span class="read-time">7 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Build</span>
+            <h3>Building Line 7: 18 Months, One Valley, Zero Compromises</h3>
+            <p>Our longest line took the better part of two years to certify. A walk through every obstacle —
+              environmental, structural, and human.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author4.jfif" alt="Rahul Nair">
+                <span class="author-name">Rahul Nair</span>
+              </div>
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span></a></span>
+              </a></span>
             </div>
-            <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span></a></span>
-        </a></span>
           </div>
         </div>
-      </div>
 
-      <div class="blog-card">
-        <div class="blog-card-image">
-          <img src="../Images/blog5.jpg" alt="Group hiking on mountain trail">
-          <span class="read-time">3 min</span>
-        </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Community</span>
-          <h3>What 4,000 Riders Taught Us About First-Timer Anxiety</h3>
-          <p>We started tracking rider sentiment at check-in. The data from two seasons pointed to one thing nobody expected.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author5.jfif" alt="Sneha Pillai">
-              <span class="author-name">Sneha Pillai</span>
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="../Images/blog5.jpg" alt="Group hiking on mountain trail">
+            <span class="read-time">3 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Community</span>
+            <h3>What 4,000 Riders Taught Us About First-Timer Anxiety</h3>
+            <p>We started tracking rider sentiment at check-in. The data from two seasons pointed to one thing nobody
+              expected.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author5.jfif" alt="Sneha Pillai">
+                <span class="author-name">Sneha Pillai</span>
+              </div>
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span></a></span>
+              </a></span>
             </div>
-            <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span></a></span>
-        </a></span>
           </div>
         </div>
-      </div>
 
-      <div class="blog-card">
-        <div class="blog-card-image">
-          <img src="../Images/blog6.jfif" alt="Rock climbing on natural cliff">
-          <span class="read-time">9 min</span>
-        </div>
-        <div class="blog-card-content">
-          <span class="blog-tag">Safety</span>
-          <h3>Monsoon Operations: What We Shut Down and Why</h3>
-          <p>A full breakdown of our weather protocols, the exact wind and rain thresholds that ground a line, and what happens to your booking when they're triggered.</p>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <img class="author-avatar" src="../Images/author6.jfif" alt="Arjun Mehta">
-              <span class="author-name">Arjun Mehta</span>
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="../Images/blog6.jfif" alt="Rock climbing on natural cliff">
+            <span class="read-time">9 min</span>
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-tag">Safety</span>
+            <h3>Monsoon Operations: What We Shut Down and Why</h3>
+            <p>A full breakdown of our weather protocols, the exact wind and rain thresholds that ground a line, and
+              what happens to your booking when they're triggered.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="author-avatar" src="../Images/author6.jfif" alt="Arjun Mehta">
+                <span class="author-name">Arjun Mehta</span>
+              </div>
+
+              <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
+                  Read More <span class="arrow">→</span></a></span>
             </div>
-           
-                <span class="blog-card-date"> <a href="../blogdetails.html" class="read-more-link">
-          Read More <span class="arrow">→</span></a></span>
           </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-<section class="blog-categories section">
-  <div class="container">
-    <div class="eyebrow center">Browse by Topic</div>
-    <h2 class="section-title center">Every <span>Category</span></h2>
-    <p class="section-sub center">From gear deep-dives to behind-the-scenes builds — find exactly what you're looking for.</p>
-
-    <div class="category-grid">
-
-      <div class="category-card">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Safety</h3>
-        <p>Protocols, gear checks, weather windows, and everything that keeps riders.</p>
-        <div class="category-count">12 articles</div>
-      </div>
-
-      <div class="category-card">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>Gear & Build</h3>
-        <p>Line construction, harness reviews, carabiner ratings — the hardware behind.</p>
-        <div class="category-count">9 articles</div>
-      </div>
-
-      <div class="category-card">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Destinations</h3>
-        <p>Scenic routes, valley profiles, and what makes each line at our park unique.</p>
-        <div class="category-count">8 articles</div>
-      </div>
-
-      <div class="category-card">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>Training</h3>
-        <p>How we develop guides, what certification looks like, and the standards we hold.</p>
-        <div class="category-count">7 articles</div>
-      </div>
-
-    </div>
-
-    <div class="blog-cta-box">
-      <h2 class="section-title">Ready to Stop <span>Reading</span> and Start Flying?</h2>
-      <p class="section-sub">Every article ends the same way — with someone booking their first run. Yours could be today.</p>
-      <div class="blog-cta-actions">
-        <a href="#" class="btn btn-primary">Book Your Slot →</a>
       </div>
     </div>
+  </section>
+  <section class="blog-categories section">
+    <div class="container">
+      <div class="eyebrow center">Browse by Topic</div>
+      <h2 class="section-title center">Every <span>Category</span></h2>
+      <p class="section-sub center">From gear deep-dives to behind-the-scenes builds — find exactly what you're looking
+        for.</p>
 
-  </div>
-</section>
+      <div class="category-grid">
 
-<div id="footer"></div>
+        <div class="category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Safety</h3>
+          <p>Protocols, gear checks, weather windows, and everything that keeps riders.</p>
+          <div class="category-count">12 articles</div>
+        </div>
 
-<script src="../js/components.js"></script>
+        <div class="category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3>Gear & Build</h3>
+          <p>Line construction, harness reviews, carabiner ratings — the hardware behind.</p>
+          <div class="category-count">9 articles</div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3>Destinations</h3>
+          <p>Scenic routes, valley profiles, and what makes each line at our park unique.</p>
+          <div class="category-count">8 articles</div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3>Training</h3>
+          <p>How we develop guides, what certification looks like, and the standards we hold.</p>
+          <div class="category-count">7 articles</div>
+        </div>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="section-title">Ready to Stop <span>Reading</span> and Start Flying?</h2>
+        <p class="section-sub">Every article ends the same way — with someone booking their first run. Yours could be
+          today.</p>
+        <div class="blog-cta-actions">
+          <a href="#" class="btn btn-primary">Book Your Slot →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="../js/components.js"></script>
 
 </body>
-</html>
 
+</html>

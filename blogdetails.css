@@ -19,8 +19,8 @@
   overflow: hidden;
   padding: 50px 0px 0px;
   background:
-    linear-gradient(rgba(5, 46, 22, 0.82),
-      rgba(5, 46, 22, 0.82)),
+    linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
     url("../Images/blogdetailsbg.jpg") center/cover no-repeat;
 }
 
@@ -49,7 +49,7 @@
 
 .blog-details-hero .eyebrow::before,
 .blog-details-hero .eyebrow::after {
-  background: var(--secondary);
+  background: var(--primary);
 }
 
 .blog-details-hero-title {
@@ -61,12 +61,16 @@
   margin-bottom: 16px;
 }
 
+.blog-details-hero-title span {
+  color: var(--primary);
+}
+
 .blog-details-hero-sub {
   max-width: 600px;
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
 }
 
 
@@ -398,7 +402,7 @@
 }
 
 .sidebar-cta p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   font-size: 0.85rem;
   line-height: 1.75;
   margin-bottom: 18px;
@@ -415,7 +419,7 @@
 
 .sidebar-cta .price-sub {
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
   margin-bottom: 18px;
 }
 
@@ -673,7 +677,7 @@
   transform: translateY(-5px);
 
   box-shadow:
-    0 16px 36px rgba(0, 0, 0, .08);
+    var(--hover);
 }
 
 .blog-card-image {
@@ -709,7 +713,7 @@
   align-self: flex-start;
 
   background: var(--secondary-10);
-  color: #92600a;
+  color: var(--primary);
 
   padding: 5px 12px;
 

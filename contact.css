@@ -76,30 +76,30 @@
   }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .contact-hero{
-    min-height: 40vh;   
-    padding: 30px 16px; 
+  .contact-hero {
+    min-height: 40vh;
+    padding: 30px 16px;
   }
 
-  .contact-hero-content{
+  .contact-hero-content {
     max-width: 100%;
   }
 
-  .contact-hero .section-title{
+  .contact-hero .section-title {
     font-size: clamp(2rem, 4vw, 2.6rem);
     margin-bottom: 10px;
   }
 
-  .contact-hero .section-sub{
+  .contact-hero .section-sub {
     font-size: 0.9rem;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
   }
 
-  .contact-hero-buttons{
+  .contact-hero-buttons {
     margin-top: 18px;
     gap: 10px;
   }
@@ -723,7 +723,7 @@
 }
 
 .contact-cta h2 span {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .contact-cta p {
