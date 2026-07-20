@@ -18,24 +18,27 @@ body {
   --primary: #FF9D00;
   --secondary: #16a34a;
 
-  --hover: 0 20px 52px rgba(255, 157, 0, 0.15);
-  --g-bg: rgba(255, 157, 0, 0.121);
+  --hover: 0 20px 52px rgba(255, 157, 0, 0.3);
+  --g-bg: rgba(247, 205, 139, 0.121);
   --text-one: #000000;
   --text-second: #111111;
   --sbg1: #ffffff;
   --sbg2: #fff7ed;
-  --card-bg: #ffedd5;
+  --card-bg: #fef4e6;
   --hero-bg: #062c01;
-
+  --secondary-10: rgba(22, 163, 74, 0.10);
+  --secondary-15: rgba(22, 163, 74, 0.15);
   --primary-10: rgba(255, 180, 0, 0.1);
   --primary-15: rgba(255, 180, 0, 0.15);
   --primary-20: rgba(255, 180, 0, 0.2);
-  --secondary-10: rgba(160, 98, 61, 0.12);
-  --secondary-15: rgba(160, 98, 61, 0.18);
-  --secondary-20: rgba(160, 98, 61, 0.25);
+  --secondary-10: rgba(22, 163, 74, 0);
+  --secondary-15: rgba(22, 163, 74, 0.178);
+  --link: #000;
 }
 
 body.dark {
+  --secondary-10: rgba(22, 163, 74, 0.10);
+  --secondary-15: rgba(22, 163, 74, 0.15);
   --primary: #FF9D00;
   --secondary: #16a34a;
   --g-bg: rgba(255, 157, 0, 0.121);
@@ -50,9 +53,9 @@ body.dark {
   --primary-10: rgba(255, 199, 54, 0.12);
   --primary-15: rgba(255, 199, 54, 0.18);
   --primary-20: rgba(255, 199, 54, 0.24);
-  --secondary-10: rgba(193, 125, 79, 0.15);
-  --secondary-15: rgba(193, 125, 79, 0.2);
-  --secondary-20: rgba(193, 125, 79, 0.28);
+  --secondary-10: rgba(22, 163, 74, 0.10);
+  --secondary-15: rgba(22, 163, 74, 0.108);
+  --link: #FF9D00;
 }
 
 body {
@@ -131,7 +134,7 @@ body {
   padding: 11px 24px;
   border-radius: 6px;
   background: var(--primary);
-  color: #fff;
+  color: #000;
   border: none;
   cursor: pointer;
   text-decoration: none;

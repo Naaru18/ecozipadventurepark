@@ -531,9 +531,9 @@
 }
 
 .how-step:hover .how-num {
-  background: var(--primary);
+  background: var(--secondary);
   color: #fff;
-  border-color: var(--primary);
+  border-color: var(--secondary);
   transform: scale(1.1);
 }
 
@@ -541,7 +541,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.15rem;
   letter-spacing: 0.04em;
-  color: var(--text-one);
+  color: var(--secondary);
   margin-bottom: 8px;
 }
 
@@ -838,7 +838,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .guide-rating {
@@ -902,9 +902,9 @@
 }
 
 .guide-cert:hover {
-  background: var(--primary);
+  background: var(--secondary);
   color: #fff;
-  border-color: var(--primary);
+  border-color: var(--secondary);
 }
 
 
@@ -1108,7 +1108,7 @@
 .testi-name {
   font-size: 0.84rem;
   font-weight: 700;
-  color: var(--text-one);
+  color: var(--secondary);
 }
 
 .testi-loc {

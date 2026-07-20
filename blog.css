@@ -473,10 +473,11 @@
 
 .blog-tag {
   display: inline-block;
-  background: var(--g-bg);
-  color: var(--primary);
+  background: var(--secondary-15);
+  color: var(--secondary);
   padding: 5px 12px;
   border-radius: 999px;
+  border: 1px solid var(--secondary-10);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;

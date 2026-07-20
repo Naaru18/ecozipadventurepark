@@ -1,6 +1,6 @@
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--sbg2);
+
   color: var(--text-one);
   transition: background 0.3s, color 0.3s;
   min-height: 100vh;
@@ -109,11 +109,13 @@ body {
   white-space: nowrap;
 }
 
-.ez-link:hover,
-.ez-link.active {
-  color: var(--primary);
-  background: var(--primary-10);
+.ez-link.active,
+.ez-link:hover {
+  color: var(--secondary);
+  background: var(--secondary-15);
+
 }
+
 
 .ez-caret {
   font-size: 0.6rem;
@@ -161,7 +163,9 @@ body {
 }
 
 .ez-sub-link:hover {
-  background: var(--primary-10);
+  color: var(--secondary);
+  background: var(--secondary-15);
+
 }
 
 .ez-sub-icon {
@@ -212,7 +216,7 @@ body {
 
   border-radius: 6px;
   background: var(--primary);
-  color: #fff;
+  color: #000;
 
   text-decoration: none;
   border: none;
@@ -556,4 +560,86 @@ body {
     padding: 12px 4px;
   }
 
+}
+
+@media (max-width: 360px) {
+  .ez-nav-container {
+    flex-wrap: nowrap;
+  }
+
+  .ez-brand {
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .ez-logo-icon img {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .ez-logo-text {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    padding-top: 5px;
+  }
+
+  .ez-logo-main {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ez-logo-sub {
+    font-size: 0.45rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 768px) {
+  .ez-nav-container {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .ez-brand {
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .ez-logo-icon img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .ez-logo-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .ez-logo-main {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ez-logo-sub {
+    font-size: 0.48rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ez-actions {
+    flex-shrink: 0;
+    gap: 6px;
+  }
 }

@@ -78,7 +78,7 @@
 }
 
 .banner-actions .btn-outline {
-  color: #fff;
+  color: #000;
   border-color: rgba(255, 255, 255, .35);
 }
 
@@ -110,13 +110,12 @@
 
 .banner-actions .btn-gold {
   background: var(--primary);
-  color: #fff;
+  color: #000;
   border: 2px solid var(--primary);
 }
 
 .banner-actions .btn-gold:hover {
 
-  color: #fff;
   border-color: var(--primary);
 }
 
@@ -639,7 +638,7 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--primary);
   font-weight: 600;
   display: block;
   margin-top: 5px;
@@ -865,13 +864,14 @@
   width: 52px;
   height: 52px;
   border-radius: 8px;
-  background: var(--primary-15);
+  background: var(--secondary-15);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   flex-shrink: 0;
-  color: var(--primary);
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
 }
 
 .val-card__body {
