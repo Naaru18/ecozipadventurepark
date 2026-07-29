@@ -222,7 +222,7 @@
   font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-second);
+  color: var(--primary);
 }
 
 .ez-logo-icon img {
@@ -530,6 +530,9 @@
     top: 18px;
     right: 20px;
   }
+   .auth-card{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -577,6 +580,9 @@
   .auth-stats div span {
     font-size: 1.3rem;
   }
+   .auth-card{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -587,6 +593,9 @@
   .af-social-btn .social-text-short {
     display: inline;
   }
+   .auth-card{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -596,6 +605,9 @@
 
   .auth-card h1 {
     font-size: 1.5rem;
+  }
+   .auth-card{
+    margin-top: 30px;
   }
 
   .auth-card .sub {

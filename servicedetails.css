@@ -82,13 +82,13 @@
 
 .service-details-buttons .btn-outline-secondary {
   background: transparent;
-  color: #fff;
+  color: var(--primary);
   border: 2px solid var(--primary);
 }
 
 .service-details-buttons .btn-outline-secondary:hover {
   background: var(--primary);
-  color: #000;
+  color: #fff;
   transform: translateY(-3px);
 }
 
@@ -174,6 +174,7 @@
 
 .detail-tabs {
   display: flex;
+  justify-content: center;
   gap: 0;
   border-bottom: 2px solid var(--primary-10);
   margin-bottom: 36px;
@@ -181,7 +182,6 @@
   scrollbar-width: none;
   max-width: 100%;
 }
-
 .detail-tabs::-webkit-scrollbar {
   display: none;
 }
@@ -499,6 +499,7 @@
   position: sticky;
   top: 24px;
   min-width: 0;
+  margin-top: 80px;
 }
 
 .sidebar-cards-row {

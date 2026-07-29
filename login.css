@@ -236,7 +236,7 @@
   font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-second);
+  color: var(--primary);
 }
 
 .auth-card h1 {
@@ -515,6 +515,9 @@
     top: 16px;
     right: 20px;
   }
+   .auth-card{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -564,6 +567,9 @@
   .auth-stats div span {
     font-size: 1.3rem;
   }
+   .auth-card{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -578,7 +584,9 @@
   .ez-logo-main {
     font-size: 1rem;
   }
-
+  .auth-card{
+    margin-top: 30px;
+  }
   .auth-card h1 {
     font-size: 1.5rem;
   }
@@ -638,7 +646,9 @@
     gap: 14px;
     margin-top: 14px;
   }
-
+   .auth-card{
+    margin-top: 30px;
+  }
   .auth-stats div span {
     font-size: 1.1rem;
   }
@@ -664,7 +674,9 @@
     height: 100%;
     min-height: auto;
   }
-
+   .auth-card{
+    margin-top: 30px;
+  }
   .auth-formside {
     order: initial;
     overflow-y: auto;

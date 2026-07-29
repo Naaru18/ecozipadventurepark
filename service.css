@@ -90,13 +90,13 @@
 
 .service-actions .btn-outline-secondary {
   background: transparent;
-  color: #fff;
-  border: 2px solid var(--primary);
+  color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .service-actions .btn-outline-secondary:hover {
   background: var(--primary);
-  color: #000;
+  color: #fff;
   transform: translateY(-3px);
 }
 
@@ -379,7 +379,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.04em;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .svc-card__price-val small {
@@ -734,7 +734,7 @@
 .why-feat__icon svg {
   width: 22px;
   height: 22px;
-  stroke: var(--primary);
+  stroke: var(--secondary);
   fill: none;
   stroke-width: 1.8;
 }
@@ -776,7 +776,7 @@
 .why-stat-card__num {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.8rem;
-  color: var(--primary);
+  color: var(--secondary);
   letter-spacing: 0.04em;
   line-height: 1;
   flex-shrink: 0;
@@ -963,9 +963,8 @@
 }
 
 
-
 .cta-strip {
-  background: var(--hero-bg);
+  background: url("../Images/servicecta-bg.jpg") center/cover no-repeat;
   padding: 72px 0;
   position: relative;
   overflow: hidden;
@@ -975,8 +974,13 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(22, 163, 74, 0.15), transparent 70%);
+  background: rgba(0, 0, 0, 0.45); /* overlay darkness */
   pointer-events: none;
+}
+
+.cta-strip > * {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-strip__inner {
@@ -998,7 +1002,7 @@
 .cta-strip__title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.4rem, 5vw, 4rem);
-  color: #fff;
+  color: #000;
   letter-spacing: 0.04em;
   line-height: 1.05;
   margin-bottom: 12px;
@@ -1010,7 +1014,7 @@
 
 .cta-strip__sub {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #000;
   margin-bottom: 32px;
   max-width: 440px;
   margin-left: auto;
@@ -1034,16 +1038,16 @@
   padding: 10px 24px;
   border-radius: 6px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
   text-decoration: none;
   transition: all 0.2s;
   font-family: 'Inter', sans-serif;
 }
 
 .cta-ghost:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: #fff;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .cta-strip__numbers {
@@ -1052,7 +1056,7 @@
   justify-content: center;
   margin-top: 48px;
   padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  
 }
 
 .cta-num {
@@ -1076,7 +1080,7 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.4);
+  color: #fff;
   font-weight: 600;
 }
 
